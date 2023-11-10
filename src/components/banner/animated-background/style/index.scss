@@ -70,7 +70,7 @@ $numComet: 10;
 }
 
 @mixin star-template($numStars, $starSize, $scrollSpeed) {
-  z-index: 1;
+  z-index: 2;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
@@ -90,7 +90,7 @@ $numComet: 10;
 }
 
 @mixin star-template-bis($numStars, $starSize, $scrollSpeed) {
-  z-index: 1;
+  z-index: 2;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
@@ -116,7 +116,7 @@ $numComet: 10;
   $bottomPosition,
   $rightPosition
 ) {
-  z-index: 1;
+  z-index: 2;
   width: ($starSize) + px;
   height: ($starSize + 80) + px;
   border-top-left-radius: 50%;

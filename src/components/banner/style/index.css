@@ -11,9 +11,8 @@ code {
 
 .portfolio-banner {
   color: #d6e1ff;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
-  margin-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
