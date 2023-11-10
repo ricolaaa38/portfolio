@@ -3,7 +3,7 @@ import './style/index.css';
 function About() {
   return (
     <section className="portfolio-about" id="about">
-      <div className="presentation">
+      <div className="presentation-about">
         <h2>À Propos</h2>
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

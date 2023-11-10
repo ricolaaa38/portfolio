@@ -5,13 +5,18 @@
   height: 90vh;
   width: 100%;
   margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .presentation {
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
   padding: 10px;
+  position: absolute;
 
   .img-banner {
     display: flex;

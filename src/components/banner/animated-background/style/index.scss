@@ -15,6 +15,7 @@ $numStarThreeStars: 100;
 $numComet: 10;
 
 .main-container {
+  z-index: 1;
   display: block;
   position: relative;
   width: 100%;
@@ -60,22 +61,16 @@ $numComet: 10;
     opacity: 1;
     height: 5px;
   }
-  30% {
-    transform: translateY(-#{($starFieldHeight) / 4}px)
-      translateX(-#{($starFieldWidth) / 4}px) rotate(-45deg);
-    opacity: 1;
-    height: 200;
-  }
   100% {
-    transform: translateY(-#{($starFieldHeight)}px)
-      translateX(-#{($starFieldWidth)}px) rotate(-60deg);
+    transform: translateY(-#{($starFieldHeight) * 0.7}px)
+      translateX(-#{$starFieldWidth}px) rotate(-55deg);
     opacity: 1;
     height: 400px;
   }
 }
 
 @mixin star-template($numStars, $starSize, $scrollSpeed) {
-  z-index: 10;
+  z-index: 1;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
@@ -95,7 +90,7 @@ $numComet: 10;
 }
 
 @mixin star-template-bis($numStars, $starSize, $scrollSpeed) {
-  z-index: 10;
+  z-index: 1;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
@@ -121,9 +116,9 @@ $numComet: 10;
   $bottomPosition,
   $rightPosition
 ) {
-  z-index: 10;
-  width: $starSize;
-  height: $starSize + 80px;
+  z-index: 1;
+  width: ($starSize) + px;
+  height: ($starSize + 80) + px;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   position: absolute;
@@ -171,45 +166,45 @@ $numComet: 10;
 .comet1 {
   @include shooting-star-template(
     $numComet,
-    random(4) + 1 + px,
-    random(20) + 10 + s,
-    random(500) - 1000 + px,
-    random(1000) - 1000 + px
+    random(4) + 1,
+    random(10) + 10 + s,
+    random(2000) - 2000 + px,
+    random(500) - 500 + px
   );
 }
 .comet2 {
   @include shooting-star-template(
     $numComet,
-    random(4) + 1 + px,
-    random(20) + 10 + s,
-    random(500) - 1000 + px,
-    random(1000) - 1000 + px
+    random(4) + 1,
+    random(10) + 10 + s,
+    random(2000) - 2000 + px,
+    random(500) - 500 + px
   );
 }
 .comet3 {
   @include shooting-star-template(
     $numComet,
-    random(4) + 1 + px,
-    random(20) + 10 + s,
-    random(500) - 1000 + px,
-    random(1000) - 1000 + px
+    random(4) + 1,
+    random(10) + 10 + s,
+    random(2000) - 2000 + px,
+    random(500) - 500 + px
   );
 }
 .comet4 {
   @include shooting-star-template(
     $numComet,
-    random(4) + 1 + px,
-    random(20) + 10 + s,
-    random(500) - 1000 + px,
-    random(1000) - 1000 + px
+    random(4) + 1,
+    random(10) + 10 + s,
+    random(2000) - 2000 + px,
+    random(500) - 500 + px
   );
 }
 .comet5 {
   @include shooting-star-template(
     $numComet,
-    random(4) + 1 + px,
-    random(20) + 10 + s,
-    random(500) - 1000 + px,
-    random(1000) - 1000 + px
+    random(4) + 1,
+    random(10) + 10 + s,
+    random(2000) - 2000 + px,
+    random(500) - 500 + px
   );
 }

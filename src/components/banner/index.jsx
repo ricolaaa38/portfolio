@@ -6,7 +6,7 @@ function Banner() {
   return (
     <section className="portfolio-banner" id="banner">
       <AnimatedBanner />
-      {/* <div className="presentation">
+      <div className="presentation">
         <h1>
           Bonjour!
           <br />
@@ -20,7 +20,7 @@ function Banner() {
         <div className="img-banner">
           <img src={PhotoGaspard} alt="chat" />
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }
