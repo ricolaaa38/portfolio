@@ -1,0 +1,25 @@
+@import '../../../style/index.scss';
+
+.portfolio-banner {
+  color: $text-color;
+  height: 90vh;
+  width: 100%;
+  margin-top: 10vh;
+}
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 10px;
+
+  .img-banner {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    padding: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../../style/index.scss';
+
+.portfolio-projets {
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  .projets1 {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+  }
+}

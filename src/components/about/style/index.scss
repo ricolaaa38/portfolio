@@ -1,0 +1,13 @@
+@import '../../../style/index.scss';
+
+.portfolio-about {
+  margin: 50px;
+  border-radius: 25px;
+  background-color: $section-background;
+  color: $text-color;
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
