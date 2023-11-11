@@ -9,7 +9,8 @@
   top: 0;
   width: 100%;
   height: 8%;
-  background-color: #201c2f;
+  // background-color: #201c2f;
+  background: linear-gradient(to bottom, $backgroundTop 0%, transparent 100%);
 }
 
 a {
