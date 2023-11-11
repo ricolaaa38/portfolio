@@ -6,7 +6,7 @@ function Header() {
     <header className="portfolio-header">
       <Logo />
       <nav>
-        <a href="/">Acceuil</a>
+        <a href="/">Accueil</a>
         <a href="#about">A propos</a>
         <a href="#projets">Projets</a>
         <a href="#contact">Contact</a>
