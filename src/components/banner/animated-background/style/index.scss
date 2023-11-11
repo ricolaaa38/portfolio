@@ -61,6 +61,12 @@ $numComet: 10;
   }
 }
 
+@keyframes twinkleFixedStar {
+  50% {
+    opacity: 0;
+  }
+}
+
 @keyframes animShootingStar {
   0% {
     transform: translateY(0) translateX(0) rotate(-45deg);
@@ -75,14 +81,14 @@ $numComet: 10;
   }
 }
 
-@mixin star-template($numStars, $starSize, $scrollSpeed) {
+@mixin fixed-star-template($numStars, $starSize, $twinkleDuration) {
   z-index: 2;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
   background: transparent;
   box-shadow: create-stars($numStars);
-  animation: animStar $scrollSpeed linear infinite;
+  animation: twinkleFixedStar $twinkleDuration ease-in-out infinite;
   &:after {
     content: ' ';
     top: -$starStartOffset;
@@ -95,14 +101,36 @@ $numComet: 10;
   }
 }
 
-@mixin star-template-bis($numStars, $starSize, $scrollSpeed) {
+@mixin star-template($numStars, $starSize, $scrollSpeed, $twinkleDuration) {
   z-index: 2;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
   background: transparent;
   box-shadow: create-stars($numStars);
-  animation: animStarBis $scrollSpeed linear infinite;
+  animation: animStar $scrollSpeed linear infinite,
+    twinkleFixedStar $twinkleDuration ease-in-out infinite;
+  &:after {
+    content: ' ';
+    top: -$starStartOffset;
+    width: $starSize;
+    height: $starSize;
+    border-radius: 50%;
+    position: absolute;
+    background: transparent;
+    box-shadow: create-stars($numStars);
+  }
+}
+
+@mixin star-template-bis($numStars, $starSize, $scrollSpeed, $twinkleDuration) {
+  z-index: 2;
+  width: $starSize;
+  height: $starSize;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: create-stars($numStars);
+  animation: animStarBis $scrollSpeed linear infinite,
+    twinkleFixedStar $twinkleDuration ease-in-out infinite;
   &:after {
     content: ' ';
     top: -$starStartOffset;
@@ -139,34 +167,45 @@ $numComet: 10;
 }
 
 .fixedStars1 {
-  @include star-template($numStarFixedStars, 1px, 0);
+  @include fixed-star-template($numStarFixedStars, 1px, 4s);
 }
 .fixedStars2 {
-  @include star-template($numStarFixedStars, 2px, 0);
+  @include fixed-star-template($numStarFixedStars, 2px, 5s);
 }
 .fixedStars3 {
-  @include star-template($numStarFixedStars, 3px, 0);
+  @include fixed-star-template($numStarFixedStars, 3px, 6s);
 }
 .stars1 {
-  @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
+  @include star-template($numStarOneStars, 1px, $starOneScrollDuration, 4s);
 }
 .stars1bis {
-  @include star-template-bis($numStarOneStars, 1px, $starOneBisScrollDuration);
+  @include star-template-bis(
+    $numStarOneStars,
+    1px,
+    $starOneBisScrollDuration,
+    5s
+  );
 }
 .stars2 {
-  @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
+  @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration, 6s);
 }
 .stars2bis {
-  @include star-template-bis($numStarTwoStars, 1px, $starTwoBisScrollDuration);
+  @include star-template-bis(
+    $numStarTwoStars,
+    1px,
+    $starTwoBisScrollDuration,
+    6s
+  );
 }
 .stars3 {
-  @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
+  @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration, 7s);
 }
 .stars3bis {
   @include star-template-bis(
     $numStarThreeStars,
     3px,
-    $starThreeBisScrollDuration
+    $starThreeBisScrollDuration,
+    7s
   );
 }
 .comet1 {
