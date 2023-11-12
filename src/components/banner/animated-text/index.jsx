@@ -44,9 +44,8 @@ function AnimatedBannerText() {
       <div className="bonjour-intro">
         <p>
           Recently embarking on the exciting journey into web development, I am
-          a passionate learner <br />
-          committed to transforming concepts into captivating digital
-          landscapes.
+          a passionate learner committed to transforming concepts into
+          captivating digital landscapes.
         </p>
       </div>
     </section>
