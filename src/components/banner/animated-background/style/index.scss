@@ -1,7 +1,7 @@
 @import '../../style/index.scss';
 
-$starFieldWidth: 2600;
-$starFieldHeight: 2600;
+$starFieldWidth: 100;
+$starFieldHeight: 100;
 $starStartOffset: 600px;
 
 $starOneScrollDuration: 150s;
@@ -31,10 +31,10 @@ $numComet: 10;
 }
 
 @function create-stars($n) {
-  $stars: '#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF';
+  $stars: '#{random($starFieldWidth)}vw #{random($starFieldHeight)}vh #FFF';
 
   @for $i from 2 through $n {
-    $stars: '#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF';
+    $stars: '#{$stars} , #{random($starFieldWidth)}vw #{random($starFieldHeight)}vh #FFF';
   }
   @return unquote($stars);
 }
@@ -44,19 +44,19 @@ $numComet: 10;
     transform: translateY(0px) translateX(0px);
   }
   to {
-    transform: translateY(-#{$starFieldHeight}px)
-      translateX(-#{$starFieldWidth}px);
+    transform: translateY(-#{$starFieldHeight}vh)
+      translateX(-#{$starFieldWidth}vw);
   }
 }
 
 @keyframes animStarBis {
   from {
-    transform: translateY(#{($starFieldHeight)}px)
-      translateX(#{($starFieldWidth)}px);
+    transform: translateY(#{($starFieldHeight)}vh)
+      translateX(#{($starFieldWidth)}vw);
   }
   to {
-    transform: translateY(-#{$starFieldHeight}px)
-      translateX(-#{$starFieldWidth}px);
+    transform: translateY(-#{$starFieldHeight}vh)
+      translateX(-#{$starFieldWidth}vw);
   }
 }
 
@@ -68,13 +68,13 @@ $numComet: 10;
 
 @keyframes animShootingStar {
   0% {
-    transform: translateY(0) translateX(0) rotate(-45deg);
+    transform: translateY(0) translateX(0) rotate(-55deg);
     opacity: 1;
     height: 5px;
   }
   100% {
-    transform: translateY(-#{($starFieldHeight) * 0.7}px)
-      translateX(-#{$starFieldWidth}px) rotate(-55deg);
+    transform: translateY(-#{($starFieldHeight) * 0.7}vh)
+      translateX(-#{$starFieldWidth}vw) rotate(-55deg);
     opacity: 1;
     height: 400px;
   }
@@ -167,6 +167,7 @@ $numComet: 10;
 
 .fixedStars1 {
   @include fixed-star-template($numStarFixedStars, 1px, 4s);
+  animation-delay: 2s;
 }
 .fixedStars2 {
   @include fixed-star-template($numStarFixedStars, 2px, 4s);
@@ -174,7 +175,6 @@ $numComet: 10;
 }
 .fixedStars3 {
   @include fixed-star-template($numStarFixedStars, 3px, 4s);
-  animation-delay: 2s;
 }
 .stars1 {
   @include star-template($numStarOneStars, 1px, $starOneScrollDuration, 4s);
@@ -217,44 +217,49 @@ $numComet: 10;
   @include shooting-star-template(
     $numComet,
     random(4) + 1,
-    random(5) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
+    5s,
+    random(50) - random(50) + vh,
+    random(50) - 50 + vw
   );
+  animation-delay: 0;
 }
 .comet2 {
   @include shooting-star-template(
     $numComet,
     random(4) + 1,
-    random(5) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
+    5s,
+    random(50) - random(50) + vh,
+    random(50) - 50 + vw
   );
+  animation-delay: 1s;
 }
 .comet3 {
   @include shooting-star-template(
     $numComet,
     random(4) + 1,
-    random(5) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
+    5s,
+    random(50) - random(50) + vh,
+    random(50) - 50 + vw
   );
+  animation-delay: 2s;
 }
 .comet4 {
   @include shooting-star-template(
     $numComet,
     random(4) + 1,
-    random(5) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
+    5s,
+    random(50) - random(50) + vh,
+    random(50) - 50 + vw
   );
+  animation-delay: 3s;
 }
 .comet5 {
   @include shooting-star-template(
     $numComet,
     random(4) + 1,
-    random(5) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
+    5s,
+    random(50) - random(50) + vh,
+    random(50) - 50 + vw
   );
+  animation-delay: 0.5s;
 }
