@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import './style/index.css';
 
 function AnimatedBannerText() {
-  const [titleContent, setTitleContent] = useState('');
+  const message = 'Nicolas Cretton.';
+  const [titleContent, setTitleContent] = useState(message);
 
   useEffect(() => {
-    const message = 'Nicolas Cretton.';
     const arr = message.split('');
     const content = arr.map((char, index) =>
       char === ' ' ? (
@@ -43,10 +43,10 @@ function AnimatedBannerText() {
 
       <div className="bonjour-intro">
         <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui
-          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-          et quas molestias excepturi sint occaecati cupiditate non provident,
-          similique sunt in culpa qui officia deserunt mollitia animi, id est
+          Recently embarking on the exciting journey into web development, I am
+          a passionate learner <br />
+          committed to transforming concepts into captivating digital
+          landscapes.
         </p>
       </div>
     </section>
