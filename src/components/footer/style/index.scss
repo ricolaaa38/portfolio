@@ -1,11 +1,12 @@
 @import '../../../style/index.scss';
 
 .portfolio-footer {
+  background: linear-gradient(to bottom, $backgroundBottom, $backgroundTop);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-bottom: 25px;
+  padding: 40px 0;
   .lien-reseaux {
     display: flex;
     gap: 10px;

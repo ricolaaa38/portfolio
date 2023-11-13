@@ -1,17 +1,86 @@
 @import '../../../style/index.scss';
 
 .portfolio-contact {
-  margin: 50px;
-  border-radius: 25px;
-  background-color: $backgroundUnderBottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+}
+
+.contact-content {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
   color: $text-color;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  width: 30%;
+  input {
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    backdrop-filter: brightness(800%);
+    background: transparent;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      outline: 2px solid white;
+    }
+  }
+  textarea {
+    backdrop-filter: brightness(800%);
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      outline: 2px solid white;
+    }
+  }
+}
+input[type='submit'] {
+  height: 40px;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.intro-contact {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+::placeholder {
+  font-size: 15px;
+  color: white;
 }

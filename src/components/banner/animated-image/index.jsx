@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style/index.css';
-import ImagePng from '../../../assets/gaspard.png';
+import ImagePng from '../../../assets/logo/React-icon.svg.png';
 
 function AnimatedBannerImage() {
   const [cloud1X, setCloud1X] = useState(0);

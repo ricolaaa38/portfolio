@@ -7,13 +7,13 @@ function Competences() {
       <AnimatedBanner />
       <div className="compentences-content">
         <h2>Mes compétences</h2>
-        <div className="mes-competences">
+        <div className="competences-outils">
           <img src="" alt="" />
           <img src="" alt="" />
           <img src="" alt="" />
         </div>
-        <div className="outils">
-          <h3>Je peux travailler avec :</h3>
+        <h3>Je peux travailler avec :</h3>
+        <div className="competences-outils">
           <img src="" alt="" />
           <img src="" alt="" />
           <img src="" alt="" />

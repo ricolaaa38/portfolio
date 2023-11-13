@@ -13,9 +13,17 @@
   position: absolute;
   color: $text-color;
   text-align: center;
+}
+
+.competences-outils {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
   img {
-    width: 25px;
-    height: 25px;
-    border: 2px solid white;
+    height: 50px;
+    width: 50px;
+    background-color: white;
   }
 }

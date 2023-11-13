@@ -9,6 +9,7 @@ import Projets from './components/projets';
 import Contact from './components/contact';
 import Footer from './components/footer';
 import reportWebVitals from './reportWebVitals';
+import '@fontsource/roboto';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
