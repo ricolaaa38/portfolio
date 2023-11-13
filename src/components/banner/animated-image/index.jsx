@@ -35,7 +35,7 @@ function AnimatedBannerImage() {
       });
     };
 
-    const animatedPictures = document.querySelector('.animated-pictures');
+    const animatedPictures = document.querySelector('.portfolio-banner');
     animatedPictures.addEventListener('mousemove', handleMouseMove);
 
     return () => {

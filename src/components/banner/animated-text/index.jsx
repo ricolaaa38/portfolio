@@ -3,7 +3,7 @@ import './style/index.css';
 
 function AnimatedBannerText() {
   const message = 'Nicolas Cretton.';
-  const [titleContent, setTitleContent] = useState(message);
+  const [titleContent, setTitleContent] = useState(' ');
 
   useEffect(() => {
     const arr = message.split('');
@@ -27,7 +27,7 @@ function AnimatedBannerText() {
   }, []);
 
   const calculateAnimationDelay = (messageLength, index) => {
-    const factor = 0.05;
+    const factor = 0.1;
     const fixedDelay = 0.1;
     return index === 0 ? fixedDelay : fixedDelay + index * factor;
   };
