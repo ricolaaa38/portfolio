@@ -4,16 +4,19 @@ function About() {
   return (
     <section className="portfolio-about" id="about">
       <div className="presentation-about">
-        <h2>À Propos</h2>
+        <h2>À Propos de moi</h2>
         <p>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. <br />
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum."
+          Bienvenue sur mon portfolio ! Je m'appelle Nicolas, et après près de
+          huit années d'expérience dans diverses industries (métalurgique
+          essentiellement), j'ai décidé de donner une nouvelle orientation à ma
+          carrière en me plongeant dans le passionnant monde du développement
+          web.
+          <br /> Mon parcours professionnel varié m'a apporté une polyvalence et
+          une approche pragmatique que j'applique avec enthousiasme dans le
+          domaine du développement. Ce portfolio est le reflet de mon engagement
+          à acquérir de nouvelles compétences et à relever des défis stimulants.
+          Explorez mes projets et découvrez comment ma passion pour le code se
+          traduit en solutions web dynamiques et fonctionnelles.
         </p>
       </div>
       <div className="skill"></div>
