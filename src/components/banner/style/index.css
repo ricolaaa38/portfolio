@@ -6,6 +6,10 @@ body {
   font-family: "Roboto";
 }
 
+h2 {
+  font-size: 25px;
+}
+
 .portfolio-banner {
   z-index: 1;
   color: #d6e1ff;

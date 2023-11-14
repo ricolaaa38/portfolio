@@ -6,6 +6,10 @@ body {
   font-family: "Roboto";
 }
 
+h2 {
+  font-size: 25px;
+}
+
 .portfolio-header {
   z-index: 100;
   display: flex;

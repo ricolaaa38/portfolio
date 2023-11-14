@@ -6,6 +6,10 @@ body {
   font-family: "Roboto";
 }
 
+h2 {
+  font-size: 25px;
+}
+
 .portfolio-footer {
   background: linear-gradient(to bottom, #100751, #201c2f);
   display: flex;
