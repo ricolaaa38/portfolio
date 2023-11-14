@@ -16,11 +16,11 @@ function Contact() {
         </div>
         <form action="#" method="post">
           <div className="label-container">
-            <div class="label-input-container">
+            <div className="label-input-container">
               <label htmlFor="name">Votre nom</label>
               <input type="text" name="name" id="name" placeholder="Dupont" />
             </div>
-            <div class="label-input-container">
+            <div className="label-input-container">
               <label htmlFor="firstname">Votre prénom</label>
               <input
                 type="text"
