@@ -27,6 +27,7 @@ h2 {
   background: linear-gradient(135deg, rgb(202, 188, 221) 0%, rgb(198, 242, 255) 100%);
 }
 .about .presentation-about {
+  z-index: 50;
   padding: 0 10% 0 10%;
   display: flex;
   flex-direction: column;

@@ -1,9 +1,12 @@
+import UseIntersectionObserver from '../function/IntersectionObserver';
 import './style/index.css';
 
 function About() {
+  UseIntersectionObserver('.hidden');
+
   return (
     <section className="portfolio-about" id="about">
-      <div className="about">
+      <div className="about hidden">
         <div className="presentation-about">
           <h2>À Propos de moi</h2>
           <p>
