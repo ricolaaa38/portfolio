@@ -55,18 +55,19 @@
 
 .indicator {
   background-color: white;
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 1rem;
+  width: 1rem;
   border-radius: 100%;
   border: none;
   outline: none;
-  box-shadow: 0 0 5px #555;
-  margin: 0 0.2rem;
+  box-shadow: 0 0 6px #444;
+  margin: 0 0.5rem;
   cursor: pointer;
 }
 
 .indicator-inactive {
   background-color: grey;
+  opacity: 0.8;
 }
 
 .projets-card {

@@ -32,6 +32,9 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+.projets h2 {
+  color: #081c37;
+}
 
 .carousel-wrapper {
   z-index: 25;
