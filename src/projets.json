@@ -2,7 +2,7 @@
   {
     "id": "booki",
     "title": "Front-end du site Booki",
-    "cover": "../../assets/images-projets/booki/cover.png",
+    "cover": "images-projets/booki/cover.png",
     "images": [
       {
         "idImage": "long",
@@ -19,7 +19,7 @@
   {
     "id": "kasa",
     "title": "Front-end du site Kasa",
-    "cover": "../../assets/images-projets/kasa/cover.png",
+    "cover": "images-projets/kasa/cover.png",
     "images": [
       {
         "idImage": "long",
@@ -36,7 +36,7 @@
   {
     "id": "vieuxGrimoire",
     "title": "Back-end du site Mon-vieux-Grimoire",
-    "cover": "../../assets/images-projets/monVieuxGrimoire/cover.png",
+    "cover": "images-projets/monVieuxGrimoire/cover.png",
     "images": [
       {
         "idImage": "long",
@@ -53,7 +53,7 @@
   {
     "id": "sophieBluel",
     "title": "Front-end du site de Sophie Bluel",
-    "cover": "../../assets/images-projets/sophieBluel/cover.png",
+    "cover": "images-projets/sophieBluel/cover.png",
     "images": [
       {
         "idImage": "long",
@@ -70,7 +70,7 @@
   {
     "id": "ninaCarducci",
     "title": "Optimisation et débugue du site de Nina Carducci",
-    "cover": "../../assets/images-projets/ninaCarducci/cover.png",
+    "cover": "images-projets/ninaCarducci/cover.png",
     "images": [
       {
         "idImage": "long",

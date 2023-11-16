@@ -1,0 +1,106 @@
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.arrow {
+  z-index: 2;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  color: white;
+  filter: drop-shadow(0 0 5px #555);
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.arrow:active {
+  opacity: 0.5;
+}
+
+.arrow-left {
+  left: 1rem;
+  transform: rotate(90deg);
+}
+
+.arrow-right {
+  right: 1rem;
+  transform: rotate(-90deg);
+}
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.indicator {
+  background-color: white;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px #555;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.indicator-inactive {
+  background-color: grey;
+}
+
+.projets-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 7px #666;
+  width: 100%;
+  height: 100%;
+}
+.projets-card img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: filter 0.3s ease;
+}
+.projets-card h3 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 25px;
+  font-weight: 800;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.projets-card:hover img {
+  filter: grayscale(50%) blur(5px);
+}
+.projets-card:hover h3 {
+  opacity: 1;
+}/*# sourceMappingURL=index.css.map */
