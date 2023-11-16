@@ -20,6 +20,18 @@ function Carousel({ projets }) {
         className="arrow arrow-left"
         onClick={prevSlide}
       />
+      <div className="img-prev-prev" onClick={prevSlide} key={prevSlide.index}>
+        <img
+          src={projets[(slide - 2 + projets.length) % projets.length].cover}
+          alt="previous"
+        />
+      </div>
+      <div className="img-prev" onClick={prevSlide} key={prevSlide.index}>
+        <img
+          src={projets[(slide - 1 + projets.length) % projets.length].cover}
+          alt="previous"
+        />
+      </div>
       {projets.map((element, index) => (
         <div
           key={index}
@@ -32,6 +44,12 @@ function Carousel({ projets }) {
           </div>
         </div>
       ))}
+      <div className="img-next" onClick={nextSlide} key={nextSlide.index}>
+        <img src={projets[(slide + 1) % projets.length].cover} alt="next" />
+      </div>
+      <div className="img-next-next" onClick={nextSlide} key={nextSlide.index}>
+        <img src={projets[(slide + 2) % projets.length].cover} alt="next" />
+      </div>
       <img
         src={Chevron}
         alt="chevron-right"
