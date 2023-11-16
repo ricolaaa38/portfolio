@@ -1,12 +1,14 @@
 import './style/index.css';
 import AnimationBanner from '../banner/animated-background/index';
+import UseIntersectionObserver from '../function/IntersectionObserver';
 
 function Contact() {
+  UseIntersectionObserver('.hidden');
   return (
     <section className="portfolio-contact" id="contact">
       <AnimationBanner />
       <div className="contact-content">
-        <div className="intro-contact">
+        <div className="intro-contact hidden">
           <h2>Me contacter</h2>
           <p>
             Vous pouvez me contacter par mail:{' '}

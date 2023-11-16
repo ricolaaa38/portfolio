@@ -1,0 +1,87 @@
+[
+  {
+    "id": "booki",
+    "title": "Front-end du site Booki",
+    "cover": "../../assets/images-projets/booki/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "../../assets/images-projets/booki/long"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "../../assets/images-projets/booki/general"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté en la création du front-end de location immobilières en html et css uniquement.",
+    "lien": "https://ricolaaa38.github.io/Projet_2_Booki_OC/"
+  },
+  {
+    "id": "kasa",
+    "title": "Front-end du site Kasa",
+    "cover": "../../assets/images-projets/kasa/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "../../assets/images-projets/kasa/long"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "../../assets/images-projets/kasa/general"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté en la création du front-end de location immobilières en React. Création des composants React et gestion des états",
+    "lien": "https://github.com/ricolaaa38/kasa-fr.git"
+  },
+  {
+    "id": "vieuxGrimoire",
+    "title": "Back-end du site Mon-vieux-Grimoire",
+    "cover": "../../assets/images-projets/monVieuxGrimoire/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "../../assets/images-projets/monVieuxGrimoire/long"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "../../assets/images-projets/monVieuxGrimoire/general"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté en la création du back-end d'un site de notation de livres. Création d'une base de données pour les livres et d'une authentification sécurisée via mot de passe",
+    "lien": "https://github.com/ricolaaa38/mon-vieux-grimoire.git"
+  },
+  {
+    "id": "sophieBluel",
+    "title": "Front-end du site de Sophie Bluel",
+    "cover": "../../assets/images-projets/sophieBluel/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "../../assets/images-projets/sophieBluel/long"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "../../assets/images-projets/sophieBluel/general"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté en la création du front-end du site de la photographe Sophie Bluel Site conçu en html, css et géré dynamiquement avec du javascript",
+    "lien": "https://github.com/ricolaaa38/Projet_3_portfolio_sophie_bluel.git"
+  },
+  {
+    "id": "ninaCarducci",
+    "title": "Optimisation et débugue du site de Nina Carducci",
+    "cover": "../../assets/images-projets/ninaCarducci/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "../../assets/images-projets/ninaCarducci/long"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "../../assets/images-projets/ninaCarducci/general"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté dans un premier temps au débugage du site de la photographe Nina Carducci, puis en l'optimisation du site sur le plan SEO, accessibilité et performance. Utilisation des outils lighthouse et wave de chrome (entre autres)",
+    "lien": "https://github.com/ricolaaa38/Projet_3_portfolio_sophie_bluel.git"
+  }
+]
