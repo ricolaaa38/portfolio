@@ -9,9 +9,11 @@ import Projets from './components/projets';
 import Contact from './components/contact';
 import Footer from './components/footer';
 import reportWebVitals from './reportWebVitals';
+import ReactModal from 'react-modal';
 import '@fontsource/roboto';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+ReactModal.setAppElement('#root');
 root.render(
   <React.StrictMode>
     <div className="body-body">

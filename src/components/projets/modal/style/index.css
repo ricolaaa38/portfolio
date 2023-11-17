@@ -1,0 +1,88 @@
+.modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.titre-croix {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.intro-modal {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 40%;
+}
+.intro-modal .img-cover-modal {
+  background-color: white;
+  border-radius: 15px;
+  width: 50%;
+  height: 100%;
+  margin: 10px;
+}
+.intro-modal .img-cover-modal img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.intro-modal .description-et-techno {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+  width: 50%;
+}
+.intro-modal .description-et-techno .lien {
+  font-size: 14px;
+}
+.intro-modal .description-et-techno .technos {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 25px;
+  align-items: center;
+}
+.intro-modal .description-et-techno .technos .techno-modal {
+  box-shadow: 0 0 3px #666;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.images-details {
+  margin-top: 25px;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.images-details .image-detail {
+  border-radius: 15px;
+  background-color: white;
+  margin: 10px;
+  width: 50%;
+  height: 100%;
+}
+.images-details .image-detail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 15px;
+}/*# sourceMappingURL=index.css.map */

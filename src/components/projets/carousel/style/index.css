@@ -15,6 +15,7 @@
   height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
 }
 
 .slide-hidden {
@@ -109,12 +110,13 @@
 
 .img-prev,
 .img-next {
+  cursor: pointer;
   margin: 10px;
   border-radius: 0.5rem;
   box-shadow: 0 0 7px #666;
   width: 20%;
   height: 60%;
-  filter: blur(2px);
+  filter: blur(1px);
 }
 .img-prev img,
 .img-next img {
@@ -127,12 +129,13 @@
 
 .img-prev-prev,
 .img-next-next {
-  margin: 10px;
+  cursor: pointer;
+  margin: 5px;
   border-radius: 0.5rem;
   box-shadow: 0 0 7px #666;
   width: 10%;
   height: 40%;
-  filter: blur(4px);
+  filter: blur(2px);
 }
 .img-prev-prev img,
 .img-next-next img {

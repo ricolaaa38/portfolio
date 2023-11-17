@@ -6,15 +6,16 @@
     "images": [
       {
         "idImage": "long",
-        "urlImage": "../../assets/images-projets/booki/long"
+        "urlImage": "images-projets/booki/long.png"
       },
       {
         "idImage": "general",
-        "urlImage": "../../assets/images-projets/booki/general"
+        "urlImage": "images-projets/booki/general.png"
       }
     ],
     "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté en la création du front-end de location immobilières en html et css uniquement.",
-    "lien": "https://ricolaaa38.github.io/Projet_2_Booki_OC/"
+    "lien": "https://ricolaaa38.github.io/Projet_2_Booki_OC/",
+    "techno": ["HTML", "CSS"]
   },
   {
     "id": "kasa",
@@ -23,15 +24,16 @@
     "images": [
       {
         "idImage": "long",
-        "urlImage": "../../assets/images-projets/kasa/long"
+        "urlImage": "images-projets/kasa/long.png"
       },
       {
         "idImage": "general",
-        "urlImage": "../../assets/images-projets/kasa/general"
+        "urlImage": "images-projets/kasa/general.png"
       }
     ],
     "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté en la création du front-end de location immobilières en React. Création des composants React et gestion des états",
-    "lien": "https://github.com/ricolaaa38/kasa-fr.git"
+    "lien": "https://github.com/ricolaaa38/kasa-fr.git",
+    "techno": ["HTML", "SCSS", "Javascript", "React"]
   },
   {
     "id": "vieuxGrimoire",
@@ -40,15 +42,16 @@
     "images": [
       {
         "idImage": "long",
-        "urlImage": "../../assets/images-projets/monVieuxGrimoire/long"
+        "urlImage": "images-projets/monVieuxGrimoire/long.png"
       },
       {
         "idImage": "general",
-        "urlImage": "../../assets/images-projets/monVieuxGrimoire/general"
+        "urlImage": "images-projets/monVieuxGrimoire/general.png"
       }
     ],
     "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté en la création du back-end d'un site de notation de livres. Création d'une base de données pour les livres et d'une authentification sécurisée via mot de passe",
-    "lien": "https://github.com/ricolaaa38/mon-vieux-grimoire.git"
+    "lien": "https://github.com/ricolaaa38/mon-vieux-grimoire.git",
+    "techno": ["Node", "Express", "MongoDB"]
   },
   {
     "id": "sophieBluel",
@@ -57,15 +60,16 @@
     "images": [
       {
         "idImage": "long",
-        "urlImage": "../../assets/images-projets/sophieBluel/long"
+        "urlImage": "images-projets/sophieBluel/long.png"
       },
       {
         "idImage": "general",
-        "urlImage": "../../assets/images-projets/sophieBluel/general"
+        "urlImage": "images-projets/sophieBluel/general.png"
       }
     ],
     "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté en la création du front-end du site de la photographe Sophie Bluel Site conçu en html, css et géré dynamiquement avec du javascript",
-    "lien": "https://github.com/ricolaaa38/Projet_3_portfolio_sophie_bluel.git"
+    "lien": "https://github.com/ricolaaa38/Projet_3_portfolio_sophie_bluel.git",
+    "techno": ["HTML", "CSS", "Javascript"]
   },
   {
     "id": "ninaCarducci",
@@ -74,14 +78,15 @@
     "images": [
       {
         "idImage": "long",
-        "urlImage": "../../assets/images-projets/ninaCarducci/long"
+        "urlImage": "images-projets/ninaCarducci/long.png"
       },
       {
         "idImage": "general",
-        "urlImage": "../../assets/images-projets/ninaCarducci/general"
+        "urlImage": "images-projets/ninaCarducci/general.png"
       }
     ],
     "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Le projet consisté dans un premier temps au débugage du site de la photographe Nina Carducci, puis en l'optimisation du site sur le plan SEO, accessibilité et performance. Utilisation des outils lighthouse et wave de chrome (entre autres)",
-    "lien": "https://github.com/ricolaaa38/Projet_3_portfolio_sophie_bluel.git"
+    "lien": "https://github.com/ricolaaa38/Projet_3_portfolio_sophie_bluel.git",
+    "techno": ["Lighthouse", "Wave"]
   }
 ]

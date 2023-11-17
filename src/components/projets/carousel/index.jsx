@@ -1,15 +1,25 @@
 import Chevron from '../../../assets/chevron.svg';
 import { useState } from 'react';
 import './style/index.css';
+import MyComponent from '../modal';
 
 function Carousel({ projets }) {
   const [slide, setSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const nextSlide = () => {
     setSlide(slide === projets.length - 1 ? 0 : slide + 1);
   };
   const prevSlide = () => {
     setSlide(slide === 0 ? projets.length - 1 : slide - 1);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -36,6 +46,7 @@ function Carousel({ projets }) {
         <div
           key={index}
           className={slide === index ? 'slide' : 'slide slide-hidden'}
+          onClick={openModal}
         >
           {' '}
           <div className="projets-card">
@@ -67,6 +78,13 @@ function Carousel({ projets }) {
           ></button>
         ))}
       </span>
+      {isModalOpen && (
+        <MyComponent
+          closeModal={closeModal}
+          projets={projets}
+          selectedSlide={slide}
+        />
+      )}
     </div>
   );
 }
