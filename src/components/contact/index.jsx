@@ -39,7 +39,16 @@ function Contact() {
             id="email"
             placeholder="monadresse@email.com"
           />
-          <label htmlFor="message">Une demande en particulier ?</label>
+          <label for="sujet">Sujet</label>
+          <select name="sujet" id="sujet">
+            <option value=""></option>
+            <option value="mesProjets">
+              Une question sur l'un de mes projets?
+            </option>
+            <option value="newProjets">Un nouveau projet à discuter ?</option>
+            <option value="autre">Autre</option>
+          </select>
+          <label htmlFor="message">Message</label>
           <textarea
             name="message"
             id="message"

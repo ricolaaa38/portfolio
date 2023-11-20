@@ -45,28 +45,27 @@ const MyComponent = ({ projets, selectedSlide, closeModal }) => {
             </div>
             <div className="description-et-techno">
               <p>{projets[selectedSlide].description}</p>
+              <p>Les technos:</p>
               <div className="technos">
-                <p>Les technos:</p>
                 {technoModal.map((element, index) => (
                   <div className="techno-modal" key={index}>
                     {element}
                   </div>
                 ))}
               </div>
-              <p className="lien">
-                Link to: <br />
-                {projets[selectedSlide].lien}
-              </p>
+              <a
+                href={projets[selectedSlide].lien}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                lien du projet
+              </a>
             </div>
           </div>
           <div className="images-details">
             {imagesModal.map((image, index) => (
-              <div className="image-detail">
-                <img
-                  src={image.urlImage}
-                  alt={projets[selectedSlide].title}
-                  key={image.id}
-                />
+              <div className="image-detail" key={image.idImage}>
+                <img src={image.urlImage} alt={projets[selectedSlide].title} />
               </div>
             ))}
           </div>

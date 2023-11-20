@@ -45,7 +45,8 @@
   align-items: center;
   width: 50%;
 }
-.intro-modal .description-et-techno .lien {
+.intro-modal .description-et-techno a {
+  color: black;
   font-size: 14px;
 }
 .intro-modal .description-et-techno .technos {
@@ -53,7 +54,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 25px;
+  gap: 10px;
   align-items: center;
 }
 .intro-modal .description-et-techno .technos .techno-modal {
