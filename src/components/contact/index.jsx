@@ -17,6 +17,23 @@ function Contact() {
     },
   });
 
+  // fonction pour réinitialiser le formulaire aprés confirmation de l'envoi
+  const resetForm = () => {
+    setFormData({
+      form: {
+        name: '',
+        firstname: '',
+        email: '',
+        sujet: '',
+        message: '',
+      },
+    });
+    setIsEmailValid(true);
+    setIsSubmitSuccess(false);
+
+    document.getElementById('contactForm').reset();
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -34,6 +51,7 @@ function Contact() {
     });
   };
 
+  // fonction pour verifier le remplissage de l'ensemble des champs du formulaire
   const isFormDataValid = () => {
     return (
       formData.form.name.trim() !== '' &&
@@ -45,6 +63,7 @@ function Contact() {
     );
   };
 
+  // fonction pour gérer le submit du formulaire et l'envoyé sur la bdd
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -67,6 +86,9 @@ function Contact() {
         console.log('Données envoyées avec succès');
         setIsFormValid(true);
         setIsSubmitSuccess(true);
+        setTimeout(() => {
+          resetForm();
+        }, 2000);
       } else {
         console.error("Erreur lors de l'envoi des données");
         setIsFormValid(false);
@@ -76,7 +98,9 @@ function Contact() {
       setIsFormValid(false);
     }
   };
+  // gestion de l'aniamation a l'apparition sur l'écran
   UseIntersectionObserver('.hidden');
+
   return (
     <section className="portfolio-contact" id="contact">
       <AnimationBanner />
@@ -94,7 +118,7 @@ function Contact() {
             Veuillez remplir tous les champs correctement.
           </p>
         )}
-        <form onSubmit={handleSubmit}>
+        <form id="contactForm" onSubmit={handleSubmit}>
           <div className="label-container">
             <div className="label-input-container">
               <label htmlFor="name">Votre nom</label>
