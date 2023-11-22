@@ -13,6 +13,19 @@
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  h3 {
+    font-size: 25px;
+    margin: 20px 10px;
+  }
+  button {
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
 }
 
 .intro-modal {

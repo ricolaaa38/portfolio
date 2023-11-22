@@ -13,6 +13,10 @@
   background: linear-gradient(to bottom, $backgroundTop 0%, transparent 100%);
 }
 
+nav {
+  margin-right: 25px;
+}
+
 a {
   color: $text-color;
   margin: 10px;

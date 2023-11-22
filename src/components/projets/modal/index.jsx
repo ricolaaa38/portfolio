@@ -34,7 +34,7 @@ const MyComponent = ({ projets, selectedSlide, closeModal }) => {
         <div className="modal-content">
           <div className="titre-croix">
             <h3>{projets[selectedSlide].title}</h3>
-            <button onClick={closeModalHandler}>Fermer</button>
+            <button onClick={closeModalHandler}>✖️</button>
           </div>
           <div className="intro-modal">
             <div className="img-cover-modal">

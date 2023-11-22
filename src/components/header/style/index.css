@@ -22,6 +22,10 @@ h2 {
   background: linear-gradient(to bottom, #201c2f 0%, transparent 100%);
 }
 
+nav {
+  margin-right: 25px;
+}
+
 a {
   color: #d6e1ff;
   margin: 10px;

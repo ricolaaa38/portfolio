@@ -30,6 +30,7 @@ function Contact() {
     });
     setIsEmailValid(true);
     setIsSubmitSuccess(false);
+    console.log('Form after reset:', formData);
 
     document.getElementById('contactForm').reset();
   };
@@ -127,6 +128,7 @@ function Contact() {
                 name="name"
                 id="name"
                 placeholder="Dupont"
+                value={formData.form.name}
                 onChange={handleChange}
               />
             </div>
@@ -137,6 +139,7 @@ function Contact() {
                 name="firstname"
                 id="firstname"
                 placeholder="Martin"
+                value={formData.form.firstname}
                 onChange={handleChange}
               />
             </div>
@@ -147,6 +150,7 @@ function Contact() {
             name="email"
             id="email"
             placeholder="monadresse@email.com"
+            value={formData.form.email}
             onChange={handleChange}
             className={!isEmailValid ? 'invalid' : ''}
           />
@@ -178,7 +182,7 @@ function Contact() {
         {isSubmitSuccess && (
           <div className="confirmation-popup">
             <p>Merci ! Votre formulaire a été envoyé avec succès.</p>
-            <button onClick={() => setIsSubmitSuccess(false)}>Fermer</button>
+            <button onClick={() => setIsSubmitSuccess(false)}>✖️</button>
           </div>
         )}
       </div>

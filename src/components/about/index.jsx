@@ -10,10 +10,10 @@ function About() {
         <div className="presentation-about">
           <h2>À Propos de moi</h2>
           <p>
-            Bienvenue sur mon portfolio ! Je m'appelle Nicolas, et après près de
-            huit années d'expérience dans diverses industries, j'ai décidé de
-            donner une nouvelle orientation à ma carrière en me plongeant dans
-            le passionnant monde du développement web.
+            Bienvenue sur mon portfolio ! Je m'appelle Nicolas, et après
+            plusieurs années d'expérience dans diverses industries, j'ai décidé
+            de donner une nouvelle orientation à ma carrière en me plongeant
+            dans le passionnant monde du développement web.
             <br /> Mon parcours professionnel varié m'a apporté une polyvalence
             et une approche pragmatique que j'applique avec enthousiasme dans le
             domaine du développement. Ce portfolio est le reflet de mon

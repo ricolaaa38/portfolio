@@ -136,6 +136,10 @@ input[type=submit]:hover {
   background: #fff;
   padding: 20px;
   border: 1px solid #ccc;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+.confirmation-popup p {
+  color: #03224c;
 }/*# sourceMappingURL=index.css.map */

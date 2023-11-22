@@ -14,6 +14,19 @@
   flex-direction: row;
   align-items: center;
 }
+.titre-croix h3 {
+  font-size: 25px;
+  margin: 20px 10px;
+}
+.titre-croix button {
+  font-size: 25px;
+  background: transparent;
+  border: none;
+}
+.titre-croix button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 
 .intro-modal {
   margin-top: 25px;
