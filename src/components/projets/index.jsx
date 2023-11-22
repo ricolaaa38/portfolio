@@ -7,9 +7,9 @@ function Projets() {
   UseIntersectionObserver('.hidden');
   return (
     <section className="portfolio-projets" id="projets">
-      <div className="projets hidden">
-        <h2>Mes Travaux</h2>
-        <div className="carousel-wrapper">
+      <div className="projets">
+        <h2 className="hidden">Mes Travaux</h2>
+        <div className="carousel-wrapper hidden">
           <Carousel projets={ProjetsElements} />
         </div>
       </div>

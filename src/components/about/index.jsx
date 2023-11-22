@@ -1,13 +1,14 @@
 import UseIntersectionObserver from '../function/IntersectionObserver';
 import './style/index.css';
+import Competences from '../competence';
 
 function About() {
   UseIntersectionObserver('.hidden');
 
   return (
     <section className="portfolio-about" id="about">
-      <div className="about hidden">
-        <div className="presentation-about">
+      <div className="about">
+        <div className="presentation-about hidden">
           <h2>À Propos de moi</h2>
           <p>
             Bienvenue sur mon portfolio ! Je m'appelle Nicolas, et après
@@ -23,6 +24,7 @@ function About() {
             fonctionnelles.
           </p>
         </div>
+        <Competences />
       </div>
     </section>
   );

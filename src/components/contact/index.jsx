@@ -127,7 +127,7 @@ function Contact() {
                 type="text"
                 name="name"
                 id="name"
-                placeholder="Dupont"
+                placeholder="Nom"
                 value={formData.form.name}
                 onChange={handleChange}
               />
@@ -138,7 +138,7 @@ function Contact() {
                 type="text"
                 name="firstname"
                 id="firstname"
-                placeholder="Martin"
+                placeholder="Prénom"
                 value={formData.form.firstname}
                 onChange={handleChange}
               />
@@ -149,7 +149,7 @@ function Contact() {
             type="email"
             name="email"
             id="email"
-            placeholder="monadresse@email.com"
+            placeholder="Email"
             value={formData.form.email}
             onChange={handleChange}
             className={!isEmailValid ? 'invalid' : ''}
@@ -172,7 +172,7 @@ function Contact() {
           <textarea
             name="message"
             id="message"
-            placeholder="Bonjour, je vous contacte car ..."
+            placeholder="Votre message"
             cols="30"
             rows="10"
             onChange={handleChange}

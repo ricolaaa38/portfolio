@@ -14,7 +14,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #100751, #201c2f);
+  background: #100751;
 }
 
 .about {

@@ -4,7 +4,7 @@ import './style/index.css';
 import Header from './components/header';
 import Banner from './components/banner';
 import About from './components/about';
-import Competences from './components/competence';
+
 import Projets from './components/projets';
 import Contact from './components/contact';
 import Footer from './components/footer';
@@ -20,7 +20,7 @@ root.render(
       <Header />
       <Banner />
       <About />
-      <Competences />
+
       <Projets />
       <Contact />
       <Footer />
