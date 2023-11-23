@@ -12,7 +12,7 @@ import Github from '../../assets/logo/github.png';
 function Competences() {
   UseIntersectionObserver('.hidden');
   return (
-    <section className="portfolio-competences">
+    <section className="portfolio-competences hidden">
       <div className="compentences-content hidden">
         <h2>Mes compétences</h2>
         <div className="competences-outils">

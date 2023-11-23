@@ -57,19 +57,19 @@ $numComet: 10;
   }
 }
 
-@keyframes animShootingStar {
-  0% {
-    transform: translateY(0) translateX(0) rotate(-55deg);
-    opacity: 1;
-    height: 5px;
-  }
-  100% {
-    transform: translateY(-#{$starFieldHeight}vh)
-      translateX(-#{$starFieldWidth}vw) rotate(-55deg);
-    opacity: 1;
-    height: 400px;
-  }
-}
+// @keyframes animShootingStar {
+//   0% {
+//     transform: translateY(0) translateX(0) rotate(-55deg);
+//     opacity: 1;
+//     height: 5px;
+//   }
+//   100% {
+//     transform: translateY(-#{$starFieldHeight}vh)
+//       translateX(-#{$starFieldWidth}vw) rotate(-55deg);
+//     opacity: 1;
+//     height: 400px;
+//   }
+// }
 
 @mixin fixed-star-template($numStars, $starSize, $twinkleDuration) {
   z-index: 2;
@@ -112,28 +112,28 @@ $numComet: 10;
   }
 }
 
-@mixin shooting-star-template(
-  $numStars,
-  $starSize,
-  $speed,
-  $bottomPosition,
-  $rightPosition
-) {
-  z-index: 2;
-  width: ($starSize) + px;
-  height: ($starSize + 80) + px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  position: absolute;
-  bottom: $bottomPosition;
-  right: $rightPosition;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 1)
-  );
-  animation: animShootingStar $speed linear infinite;
-}
+// @mixin shooting-star-template(
+//   $numStars,
+//   $starSize,
+//   $speed,
+//   $bottomPosition,
+//   $rightPosition
+// ) {
+//   z-index: 2;
+//   width: ($starSize) + px;
+//   height: ($starSize + 80) + px;
+//   border-top-left-radius: 50%;
+//   border-top-right-radius: 50%;
+//   position: absolute;
+//   bottom: $bottomPosition;
+//   right: $rightPosition;
+//   background: linear-gradient(
+//     to top,
+//     rgba(255, 255, 255, 0),
+//     rgba(255, 255, 255, 1)
+//   );
+//   animation: animShootingStar $speed linear infinite;
+// }
 
 // Fixed Stars
 .fixedStars1 {
@@ -164,66 +164,66 @@ $numComet: 10;
 }
 
 // Moving comets
-.comet1 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    5s,
-    random(50) - random(50) + vh,
-    random(50) - 50 + vw
-  );
-  animation-delay: 0;
-}
-.comet2 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    5s,
-    random(50) - random(50) + vh,
-    random(50) - 50 + vw
-  );
-  animation-delay: 4s;
-}
-.comet3 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    5s,
-    random(50) - random(50) + vh,
-    random(50) - 50 + vw
-  );
-  animation-delay: 6s;
-}
-.comet4 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    5s,
-    random(50) - random(50) + vh,
-    random(50) - 50 + vw
-  );
-  animation-delay: 8s;
-}
-.comet5 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    5s,
-    random(50) - random(50) + vh,
-    random(50) - 50 + vw
-  );
-  animation-delay: 1s;
-}
-.comet6 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    5s,
-    random(50) - random(50) + vh,
-    random(50) - 50 + vw
-  );
-  animation-delay: 0;
-}
+// .comet1 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 0;
+// }
+// .comet2 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 4s;
+// }
+// .comet3 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 6s;
+// }
+// .comet4 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 8s;
+// }
+// .comet5 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 1s;
+// }
+// .comet6 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 0;
+// }
 
 // option if you need to add other Stars
 
