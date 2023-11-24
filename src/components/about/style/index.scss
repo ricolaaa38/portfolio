@@ -15,7 +15,8 @@
   background: linear-gradient(
     to top,
     rgba(202, 188, 221, 1) 0%,
-    rgba(198, 242, 255, 1) 100%
+    rgba(198, 242, 255, 1) 98%,
+    $backgroundBottom 100%
   );
 
   .about-text-img {
@@ -63,6 +64,7 @@
       margin: 40px 0;
     }
     .presentation-about {
+      margin-top: 25px;
       width: 100%;
       p {
         font-size: 20px;

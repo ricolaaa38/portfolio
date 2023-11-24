@@ -10,7 +10,7 @@ h2 {
   font-size: 25px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   h2 {
     font-size: 20px;
   }
@@ -25,10 +25,17 @@ h2 {
 }
 .portfolio-footer .lien-reseaux {
   display: flex;
-  gap: 10px;
-  padding: 10px 0;
+  gap: 15px;
+  padding: 15px 0;
 }
 .portfolio-footer p {
-  margin: 0;
+  margin-top: 20px;
   color: #d6e1ff;
+}
+
+@media (max-width: 768px) {
+  .portfolio-footer .lien-reseaux {
+    gap: 15px;
+    padding: 15px 0;
+  }
 }/*# sourceMappingURL=index.css.map */

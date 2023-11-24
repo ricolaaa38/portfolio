@@ -8,6 +8,7 @@
 }
 
 .titre-croix {
+  z-index: 10;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -99,4 +100,29 @@
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .titre-croix h3 {
+    font-size: 20px;
+    margin: 10px 5px;
+  }
+  .intro-modal {
+    flex-direction: column-reverse;
+    height: 500px;
+  }
+  .intro-modal .img-cover-modal {
+    width: 100%;
+  }
+  .intro-modal .description-et-techno {
+    width: 100%;
+  }
+  .images-details {
+    flex-direction: column;
+    height: auto;
+  }
+  .images-details .image-detail {
+    width: 100%;
+    max-height: 600px;
+  }
 }/*# sourceMappingURL=index.css.map */

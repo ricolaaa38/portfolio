@@ -10,7 +10,7 @@ h2 {
   font-size: 25px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   h2 {
     font-size: 20px;
   }
@@ -27,7 +27,7 @@ h2 {
   z-index: 10;
   margin: 10px 0 0 0;
   padding: 5%;
-  background: linear-gradient(to top, rgb(202, 188, 221) 0%, rgb(198, 242, 255) 100%);
+  background: linear-gradient(to top, rgb(202, 188, 221) 0%, rgb(198, 242, 255) 98%, #100751 100%);
 }
 .about .about-text-img {
   display: flex;
@@ -70,6 +70,7 @@ h2 {
     margin: 40px 0;
   }
   .about .presentation-about {
+    margin-top: 25px;
     width: 100%;
   }
   .about .presentation-about p {

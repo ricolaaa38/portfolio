@@ -109,9 +109,10 @@ function Contact() {
         <div className="intro-contact hidden">
           <h2>Me contacter</h2>
           <p>
-            Vous pouvez me contacter par mail:{' '}
+            Vous pouvez me contacter par mail:
+            <br />
             <strong>nicolas.cretton@orange.fr</strong> <br />
-            ou via le formulaire ci-contre
+            ou via le formulaire ci-contre:
           </p>
         </div>
         {isFormValid || (

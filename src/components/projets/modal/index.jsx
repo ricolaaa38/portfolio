@@ -1,14 +1,43 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import ReactModal from 'react-modal';
 import './style/index.css';
 
 const MyComponent = ({ projets, selectedSlide, closeModal }) => {
   const [modalIsOpen, setModalIsOpen] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const closeModalHandler = () => {
+  const closeModalHandler = useCallback(() => {
     setModalIsOpen(false);
     closeModal();
-  };
+  }, [closeModal]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        closeModalHandler();
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [closeModalHandler]);
+
+  const modalWidth = windowWidth > 768 ? '50%' : '90%';
+  const modalMargin = windowWidth > 768 ? 'auto' : '0';
+  const topPosition = windowWidth > 768 ? '10%' : '15%';
+  const leftPosition = windowWidth > 768 ? '50%' : '50%';
+  const translateValue =
+    windowWidth > 768 ? `translate(-50%, 0%)` : 'translate(-50%, -5%)';
+
   const imagesModal = projets[selectedSlide].images;
   const technoModal = projets[selectedSlide].techno;
 
@@ -21,8 +50,11 @@ const MyComponent = ({ projets, selectedSlide, closeModal }) => {
         style={{
           overlay: { backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: 150 },
           content: {
-            width: '50%',
-            margin: 'auto',
+            width: modalWidth,
+            margin: modalMargin,
+            top: topPosition,
+            left: leftPosition,
+            transform: translateValue,
             zIndex: 151,
             background:
               'linear-gradient(135deg, rgba(202, 188, 221, 1), rgba(198, 242, 255, 1))',

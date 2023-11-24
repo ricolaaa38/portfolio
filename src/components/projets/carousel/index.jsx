@@ -14,8 +14,10 @@ function Carousel({ projets }) {
     setSlide(slide === 0 ? projets.length - 1 : slide - 1);
   };
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openModalHandler = () => {
+    if (!isModalOpen) {
+      setIsModalOpen(true);
+    }
   };
 
   const closeModal = () => {
@@ -46,7 +48,7 @@ function Carousel({ projets }) {
         <div
           key={index}
           className={slide === index ? 'slide' : 'slide slide-hidden'}
-          onClick={openModal}
+          onClick={openModalHandler}
         >
           {' '}
           <div className="projets-card">
