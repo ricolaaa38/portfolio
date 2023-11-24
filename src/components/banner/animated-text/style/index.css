@@ -26,7 +26,6 @@ h2 {
           background-clip: text;
   -webkit-text-fill-color: transparent;
   align-items: flex-start;
-  min-height: 100vh;
   margin-top: 0;
   margin-left: 20%;
 }
@@ -60,8 +59,8 @@ h2 {
   .animated-text {
     justify-content: flex-start;
     align-items: center;
-    margin-top: 50%;
-    margin-left: 10%;
+    margin-top: 30%;
+    margin-left: 0;
   }
   .animated-text .hi {
     font-size: 1.5em;
@@ -76,7 +75,7 @@ h2 {
 @media (max-width: 768px) {
   .animated-text {
     align-items: center;
-    margin-top: 400px;
+    margin-top: 200px;
     margin-left: 0;
   }
   .animated-text .hi {

@@ -31,12 +31,12 @@ const MyComponent = ({ projets, selectedSlide, closeModal }) => {
     };
   }, [closeModalHandler]);
 
-  const modalWidth = windowWidth > 768 ? '50%' : '90%';
-  const modalMargin = windowWidth > 768 ? 'auto' : '0';
-  const topPosition = windowWidth > 768 ? '10%' : '15%';
-  const leftPosition = windowWidth > 768 ? '50%' : '50%';
+  const modalWidth = windowWidth > 1024 ? '50%' : '90%';
+  const modalMargin = windowWidth > 1024 ? 'auto' : '0';
+  const topPosition = windowWidth > 1024 ? '10%' : '15%';
+  const leftPosition = windowWidth > 1024 ? '50%' : '50%';
   const translateValue =
-    windowWidth > 768 ? `translate(-50%, 0%)` : 'translate(-50%, -5%)';
+    windowWidth > 1024 ? `translate(-50%, 0%)` : 'translate(-50%, -5%)';
 
   const imagesModal = projets[selectedSlide].images;
   const technoModal = projets[selectedSlide].techno;
