@@ -10,6 +10,11 @@ h2 {
   font-size: 25px;
 }
 
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 20px;
+  }
+}
 .portfolio-banner {
   z-index: 1;
   color: #d6e1ff;
@@ -41,4 +46,14 @@ h2 {
 }
 .banner-content .banner-image {
   width: 40%;
+}
+
+@media (max-width: 1024px) {
+  .banner-content {
+    flex-direction: column;
+  }
+  .banner-text,
+  .banner-image {
+    width: 100%;
+  }
 }/*# sourceMappingURL=index.css.map */

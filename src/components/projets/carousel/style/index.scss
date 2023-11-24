@@ -144,3 +144,35 @@
     object-fit: cover;
   }
 }
+
+@media (max-width: 1024px) {
+  .slide {
+    width: 60%;
+    height: 70%;
+  }
+  .img-prev,
+  .img-next {
+    width: 15%;
+    height: 40%;
+  }
+  .img-next-next,
+  .img-prev-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    width: 90%;
+  }
+  .img-prev,
+  .img-next {
+    display: none;
+  }
+  .arrow-left {
+    left: 0;
+  }
+  .arrow-right {
+    right: 0;
+  }
+}

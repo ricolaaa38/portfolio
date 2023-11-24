@@ -10,6 +10,11 @@ h2 {
   font-size: 25px;
 }
 
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 20px;
+  }
+}
 .portfolio-about {
   display: flex;
   justify-content: center;
@@ -20,11 +25,9 @@ h2 {
 .about {
   width: 100%;
   z-index: 10;
-  margin: 0px;
-  border-radius: 0px;
-  box-shadow: 5px 5px 10px rgb(198, 242, 255), -5px -5px 10px rgb(202, 188, 221);
+  margin: 10px 0 0 0;
   padding: 5%;
-  background: linear-gradient(135deg, rgb(202, 188, 221) 0%, rgb(198, 242, 255) 100%);
+  background: linear-gradient(to top, rgb(202, 188, 221) 0%, rgb(198, 242, 255) 100%);
 }
 .about .about-text-img {
   display: flex;
@@ -33,13 +36,13 @@ h2 {
   flex-direction: row;
 }
 .about .about-img {
-  width: 30%;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   border-radius: 40%;
   background-color: white;
 }
 .about .presentation-about {
-  width: 70%;
+  width: 60%;
   z-index: 50;
   padding: 0 10% 0 10%;
   display: flex;
@@ -55,4 +58,30 @@ h2 {
   margin: 5% 0 5% 0;
   font-size: 25px;
   color: #03224c;
+}
+
+@media (max-width: 1024px) {
+  .about .about-text-img {
+    flex-direction: column-reverse;
+  }
+  .about .about-img {
+    width: 250px;
+    height: 250px;
+    margin: 40px 0;
+  }
+  .about .presentation-about {
+    width: 100%;
+  }
+  .about .presentation-about p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .about .about-img {
+    width: 200px;
+    height: 200px;
+  }
+  .about .presentation-about p {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=index.css.map */

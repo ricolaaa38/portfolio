@@ -10,6 +10,11 @@ h2 {
   font-size: 25px;
 }
 
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 20px;
+  }
+}
 .animated-text {
   display: flex;
   flex-direction: column;
@@ -31,7 +36,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.title {
+.titleBanner {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -49,4 +54,38 @@ h2 {
 
 .bonjour-intro {
   font-size: 1.5em;
+}
+
+@media (max-width: 1024px) {
+  .animated-text {
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50%;
+    margin-left: 10%;
+  }
+  .animated-text .hi {
+    font-size: 1.5em;
+  }
+  .titleBanner {
+    font-size: 4em;
+  }
+  .bonjour-intro {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 768px) {
+  .animated-text {
+    align-items: center;
+    margin-top: 300px;
+    margin-left: 0;
+  }
+  .animated-text .hi {
+    font-size: 1em;
+  }
+  .titleBanner {
+    font-size: 2.5em;
+  }
+  .bonjour-intro {
+    font-size: 1em;
+  }
 }/*# sourceMappingURL=index.css.map */

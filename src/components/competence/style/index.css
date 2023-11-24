@@ -10,12 +10,17 @@ h2 {
   font-size: 25px;
 }
 
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 20px;
+  }
+}
 .portfolio-competences {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   box-shadow: 0 0 8px #999;
@@ -29,6 +34,7 @@ h2 {
   width: 80%;
 }
 .compentences-content h2 {
+  margin-top: 50px;
   margin-bottom: 60px;
 }
 

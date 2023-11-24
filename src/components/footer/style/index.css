@@ -10,6 +10,11 @@ h2 {
   font-size: 25px;
 }
 
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 20px;
+  }
+}
 .portfolio-footer {
   background: linear-gradient(to bottom, #100751, #201c2f);
   display: flex;

@@ -7,6 +7,11 @@ import Javascript from '../../assets/logo/javascript.png';
 import Scss from '../../assets/logo/sass.png';
 import Node from '../../assets/logo/node.png';
 import Github from '../../assets/logo/github.png';
+import Git from '../../assets/logo/git.png';
+import Wakelet from '../../assets/logo/wakelet.png';
+import Trello from '../../assets/logo/trello.png';
+import Express from '../../assets/logo/expressjs.png';
+import Mongo from '../../assets/logo/mongodb.png';
 
 function Competences() {
   UseIntersectionObserver('.hidden');
@@ -22,6 +27,14 @@ function Competences() {
           <img src={Scss} alt="Scss sass logo" />
           <img src={Node} alt="Node logo" />
           <img className="github-logo" src={Github} alt="Github logo" />
+        </div>
+        <h2>Autres</h2>
+        <div className="competences-outils">
+          <img src={Express} alt="expressjs logo" />
+          <img src={Mongo} alt="mongodb logo" />
+          <img src={Git} alt="git logo" />
+          <img src={Trello} alt="trello logo" />
+          <img src={Wakelet} alt="wakelet logo" />
         </div>
       </div>
     </section>

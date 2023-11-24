@@ -133,4 +133,17 @@
   100% {
     transform: translateY(0);
   }
+}
+@media (max-width: 1024px) {
+  .animated-pictures {
+    width: 450px;
+    height: 337px;
+    top: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .animated-pictures {
+    width: 350px;
+    height: 262px;
+  }
 }/*# sourceMappingURL=index.css.map */

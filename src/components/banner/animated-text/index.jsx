@@ -46,19 +46,15 @@ function AnimatedBannerText() {
 
   return (
     <section className="animated-text">
-      <span className="hi">Hi, I am </span>
+      <span className="hi">Bonjour, je suis </span>
       <div className="bonjour">
-        <h1 className="title" id="titleIntro">
+        <h1 className="titleBanner" id="titleIntro">
           {titleContent}
         </h1>
       </div>
 
       <div className="bonjour-intro">
-        <p>
-          Recently embarking on the exciting journey into web development, I am
-          a passionate learner committed to transforming concepts into
-          captivating digital landscapes.
-        </p>
+        <p>Développeur web junior, front et back</p>
       </div>
     </section>
   );

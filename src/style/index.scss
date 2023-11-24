@@ -14,3 +14,9 @@ $text-color: #d6e1ff;
 $backgroundTop: #201c2f;
 $backgroundBottom: #100751;
 $backgroundUnderBottom: #101159;
+
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 20px;
+  }
+}
