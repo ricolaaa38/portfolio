@@ -75,7 +75,10 @@ function Carousel({ projets }) {
             className={
               slide === index ? 'indicator' : 'indicator indicator-inactive'
             }
-          ></button>
+            alt="bouttons déplacement carousel"
+          >
+            .
+          </button>
         ))}
       </span>
       {isModalOpen && (

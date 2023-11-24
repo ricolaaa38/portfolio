@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSpring, animated } from 'react-spring';
 import './style/index.css';
 
 function AnimatedBannerText() {
@@ -11,20 +12,31 @@ function AnimatedBannerText() {
       char === ' ' ? (
         <span key={index}>&nbsp;</span>
       ) : (
-        <span
-          className="spanMessage"
+        <AnimatedChar
           key={index}
-          style={{
-            animationDelay: `${calculateAnimationDelay(arr.length, index)}s`,
-          }}
-        >
-          {char}
-        </span>
+          index={index}
+          char={char}
+          messageLength={arr.length}
+        />
       )
     );
 
     setTitleContent(content);
-  }, []);
+  }, [message]);
+
+  const AnimatedChar = ({ char, index, messageLength }) => {
+    const props = useSpring({
+      opacity: 1,
+      from: { opacity: 0 },
+      delay: calculateAnimationDelay(messageLength, index) * 500, // Convert seconds to milliseconds
+    });
+
+    return (
+      <animated.span className="spanMessage" style={props}>
+        {char}
+      </animated.span>
+    );
+  };
 
   const calculateAnimationDelay = (messageLength, index) => {
     const factor = 0.1;

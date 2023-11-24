@@ -1,4 +1,3 @@
-import AnimatedBanner from '../banner/animated-background/index';
 import UseIntersectionObserver from '../function/IntersectionObserver';
 import './style/index.css';
 import ReactLogo from '../../assets/logo/react.png';
