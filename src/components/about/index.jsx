@@ -6,8 +6,8 @@ function About() {
   UseIntersectionObserver('.hidden');
 
   return (
-    <section className="portfolio-about" id="about">
-      <div className="about">
+    <section className="portfolio-about">
+      <div className="about" id="about">
         <div className="about-text-img">
           <div className="about-img"></div>
           <div className="presentation-about hidden">

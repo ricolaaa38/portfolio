@@ -31,9 +31,10 @@ const MyComponent = ({ selectedSlide, closeModal }) => {
     };
   }, [closeModalHandler]);
 
-  const modalWidth = windowWidth > 1024 ? '50%' : '90%';
-  const modalMargin = windowWidth > 1024 ? 'auto' : '0';
-  const topPosition = windowWidth > 1024 ? '10%' : '15%';
+  const modalWidth = windowWidth > 1024 ? '60%' : '90%';
+  const modalHeight = windowWidth > 1024 ? '95%' : 'auto';
+  const modalMargin = windowWidth > 1024 ? '10px' : '0';
+  const topPosition = windowWidth > 1024 ? '2%' : '10%';
   const leftPosition = windowWidth > 1024 ? '50%' : '50%';
   const translateValue =
     windowWidth > 1024 ? `translate(-50%, 0%)` : 'translate(-50%, -5%)';
@@ -51,6 +52,7 @@ const MyComponent = ({ selectedSlide, closeModal }) => {
           overlay: { backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: 150 },
           content: {
             width: modalWidth,
+            height: modalHeight,
             margin: modalMargin,
             top: topPosition,
             left: leftPosition,
@@ -59,6 +61,7 @@ const MyComponent = ({ selectedSlide, closeModal }) => {
             background:
               'linear-gradient(135deg, rgba(202, 188, 221, 1), rgba(198, 242, 255, 1))',
             borderRadius: '10px',
+            boxSizing: 'border-box',
           },
         }}
       >
@@ -76,15 +79,7 @@ const MyComponent = ({ selectedSlide, closeModal }) => {
               />
             </div>
             <div className="description-et-techno">
-              <p>{Projets[selectedSlide].description}</p>
-              <p>Les technos:</p>
-              <div className="technos">
-                {technoModal.map((element, index) => (
-                  <div className="techno-modal" key={index}>
-                    {element}
-                  </div>
-                ))}
-              </div>
+              {' '}
               <a
                 href={Projets[selectedSlide].lien}
                 target="_blank"
@@ -92,6 +87,17 @@ const MyComponent = ({ selectedSlide, closeModal }) => {
               >
                 lien du projet
               </a>
+              <p className="text-description">
+                {Projets[selectedSlide].description}
+              </p>
+              <p className="techno-title">Les technos:</p>
+              <div className="technos">
+                {technoModal.map((element, index) => (
+                  <div className="techno-modal" key={index}>
+                    {element}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="images-details">

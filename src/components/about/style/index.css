@@ -27,6 +27,7 @@ h2 {
   z-index: 10;
   margin: 10px 0 0 0;
   padding: 5%;
+  padding-bottom: 0%;
   background: linear-gradient(to top, rgb(202, 188, 221) 0%, rgb(198, 242, 255) 98%, #100751 100%);
 }
 .about .about-text-img {
@@ -51,6 +52,7 @@ h2 {
   text-align: center;
 }
 .about .presentation-about h2 {
+  margin-top: 25px;
   color: #081c37;
 }
 .about .presentation-about p {

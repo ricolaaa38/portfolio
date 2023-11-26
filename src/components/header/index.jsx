@@ -11,7 +11,20 @@ function Header() {
     setDropdownVisible(!isDropdownVisible);
   };
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (event) => {
+    event.preventDefault();
+
+    const targetId = event.target.getAttribute('href').substring(1);
+    console.log('Target ID:', targetId);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+
     setNavActive(false);
     setDropdownVisible(false);
   };
@@ -22,7 +35,7 @@ function Header() {
         <Logo />
         <ul className={`${isDropdownVisible ? 'visible' : 'non-visible'}`}>
           <li>
-            <a href="/" onClick={handleLinkClick}>
+            <a href="#accueil" onClick={handleLinkClick}>
               Accueil
             </a>
           </li>

@@ -5,7 +5,7 @@ import AnimatedBannerText from './animated-text';
 
 function Banner() {
   return (
-    <section className="portfolio-banner" id="banner">
+    <section className="portfolio-banner" id="accueil">
       <AnimatedBanner />
       <div className="banner-content">
         <div className="banner-text">

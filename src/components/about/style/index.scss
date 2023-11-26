@@ -12,6 +12,7 @@
   margin: 10px 0 0 0;
 
   padding: 5%;
+  padding-bottom: 0%;
   background: linear-gradient(
     to top,
     rgba(202, 188, 221, 1) 0%,
@@ -42,6 +43,7 @@
     align-items: center;
     text-align: center;
     h2 {
+      margin-top: 25px;
       color: #081c37;
     }
     p {
