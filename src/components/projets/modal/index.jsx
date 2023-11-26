@@ -84,6 +84,7 @@ const MyComponent = ({ selectedSlide, closeModal }) => {
                 href={Projets[selectedSlide].lien}
                 target="_blank"
                 rel="noopener noreferrer"
+                alt={Projets[selectedSlide].title}
               >
                 lien du projet
               </a>

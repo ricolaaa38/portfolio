@@ -35,22 +35,22 @@ function Header() {
         <Logo />
         <ul className={`${isDropdownVisible ? 'visible' : 'non-visible'}`}>
           <li>
-            <a href="#accueil" onClick={handleLinkClick}>
+            <a href="#accueil" onClick={handleLinkClick} alt="lien accueil">
               Accueil
             </a>
           </li>
           <li>
-            <a href="#about" onClick={handleLinkClick}>
+            <a href="#about" onClick={handleLinkClick} alt="lien a propos">
               A propos
             </a>
           </li>
           <li>
-            <a href="#projets" onClick={handleLinkClick}>
+            <a href="#projets" onClick={handleLinkClick} alt="lien projets">
               Projets
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={handleLinkClick}>
+            <a href="#contact" onClick={handleLinkClick} alt="lien contact">
               Contact
             </a>
           </li>
