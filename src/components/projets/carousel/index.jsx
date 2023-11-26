@@ -2,16 +2,17 @@ import Chevron from '../../../assets/chevron.svg';
 import { useState } from 'react';
 import './style/index.css';
 import MyComponent from '../modal';
+import Projets from '../../../projets.json';
 
-function Carousel({ projets }) {
+function Carousel() {
   const [slide, setSlide] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const nextSlide = () => {
-    setSlide(slide === projets.length - 1 ? 0 : slide + 1);
+    setSlide(slide === Projets.length - 1 ? 0 : slide + 1);
   };
   const prevSlide = () => {
-    setSlide(slide === 0 ? projets.length - 1 : slide - 1);
+    setSlide(slide === 0 ? Projets.length - 1 : slide - 1);
   };
 
   const openModalHandler = () => {
@@ -34,17 +35,17 @@ function Carousel({ projets }) {
       />
       <div className="img-prev-prev" onClick={prevSlide} key={prevSlide.index}>
         <img
-          src={projets[(slide - 2 + projets.length) % projets.length].cover}
+          src={Projets[(slide - 2 + Projets.length) % Projets.length].cover}
           alt="previous"
         />
       </div>
       <div className="img-prev" onClick={prevSlide} key={prevSlide.index}>
         <img
-          src={projets[(slide - 1 + projets.length) % projets.length].cover}
+          src={Projets[(slide - 1 + Projets.length) % Projets.length].cover}
           alt="previous"
         />
       </div>
-      {projets.map((element, index) => (
+      {Projets.map((element, index) => (
         <div
           key={index}
           className={slide === index ? 'slide' : 'slide slide-hidden'}
@@ -58,10 +59,10 @@ function Carousel({ projets }) {
         </div>
       ))}
       <div className="img-next" onClick={nextSlide} key={nextSlide.index}>
-        <img src={projets[(slide + 1) % projets.length].cover} alt="next" />
+        <img src={Projets[(slide + 1) % Projets.length].cover} alt="next" />
       </div>
       <div className="img-next-next" onClick={nextSlide} key={nextSlide.index}>
-        <img src={projets[(slide + 2) % projets.length].cover} alt="next" />
+        <img src={Projets[(slide + 2) % Projets.length].cover} alt="next" />
       </div>
       <img
         src={Chevron}
@@ -70,7 +71,7 @@ function Carousel({ projets }) {
         onClick={nextSlide}
       />
       <span className="indicators">
-        {projets.map((_, index) => (
+        {Projets.map((_, index) => (
           <button
             key={index}
             onClick={() => setSlide(index)}
@@ -84,11 +85,7 @@ function Carousel({ projets }) {
         ))}
       </span>
       {isModalOpen && (
-        <MyComponent
-          closeModal={closeModal}
-          projets={projets}
-          selectedSlide={slide}
-        />
+        <MyComponent closeModal={closeModal} selectedSlide={slide} />
       )}
     </div>
   );

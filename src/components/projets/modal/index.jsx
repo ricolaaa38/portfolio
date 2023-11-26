@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import ReactModal from 'react-modal';
 import './style/index.css';
+import Projets from '../../../projets.json';
 
-const MyComponent = ({ projets, selectedSlide, closeModal }) => {
+const MyComponent = ({ selectedSlide, closeModal }) => {
   const [modalIsOpen, setModalIsOpen] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
   const closeModalHandler = useCallback(() => {
     setModalIsOpen(false);
     closeModal();
@@ -38,8 +38,8 @@ const MyComponent = ({ projets, selectedSlide, closeModal }) => {
   const translateValue =
     windowWidth > 1024 ? `translate(-50%, 0%)` : 'translate(-50%, -5%)';
 
-  const imagesModal = projets[selectedSlide].images;
-  const technoModal = projets[selectedSlide].techno;
+  const imagesModal = Projets[selectedSlide].images;
+  const technoModal = Projets[selectedSlide].techno;
 
   return (
     <div>
@@ -65,18 +65,18 @@ const MyComponent = ({ projets, selectedSlide, closeModal }) => {
         {/* contenu de la modal */}
         <div className="modal-content">
           <div className="titre-croix">
-            <h3>{projets[selectedSlide].title}</h3>
+            <h3>{Projets[selectedSlide].title}</h3>
             <button onClick={closeModalHandler}>✖️</button>
           </div>
           <div className="intro-modal">
             <div className="img-cover-modal">
               <img
-                src={projets[selectedSlide].cover}
-                alt={projets[selectedSlide].title}
+                src={Projets[selectedSlide].cover}
+                alt={Projets[selectedSlide].title}
               />
             </div>
             <div className="description-et-techno">
-              <p>{projets[selectedSlide].description}</p>
+              <p>{Projets[selectedSlide].description}</p>
               <p>Les technos:</p>
               <div className="technos">
                 {technoModal.map((element, index) => (
@@ -86,7 +86,7 @@ const MyComponent = ({ projets, selectedSlide, closeModal }) => {
                 ))}
               </div>
               <a
-                href={projets[selectedSlide].lien}
+                href={Projets[selectedSlide].lien}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -97,7 +97,7 @@ const MyComponent = ({ projets, selectedSlide, closeModal }) => {
           <div className="images-details">
             {imagesModal.map((image, index) => (
               <div className="image-detail" key={image.idImage}>
-                <img src={image.urlImage} alt={projets[selectedSlide].title} />
+                <img src={image.urlImage} alt={Projets[selectedSlide].title} />
               </div>
             ))}
           </div>

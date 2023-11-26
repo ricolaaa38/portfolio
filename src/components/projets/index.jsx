@@ -1,6 +1,6 @@
 import './style/index.css';
 import UseIntersectionObserver from '../function/IntersectionObserver';
-import ProjetsElements from '../../projets.json';
+
 import Carousel from './carousel';
 
 function Projets() {
@@ -10,7 +10,7 @@ function Projets() {
       <div className="projets">
         <h2 className="hidden">Mes Travaux</h2>
         <div className="carousel-wrapper hidden">
-          <Carousel projets={ProjetsElements} />
+          <Carousel />
         </div>
       </div>
     </section>
