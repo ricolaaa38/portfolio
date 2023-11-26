@@ -43,9 +43,14 @@ form {
   flex-direction: column;
   width: 35%;
 }
-form input,
+form input {
+  color: #03224c;
+}
 form select {
   color: #03224c;
+}
+form input,
+form select {
   border: none;
   height: 20px;
   border-radius: 5px;
@@ -64,8 +69,7 @@ form select:focus {
 }
 form input option,
 form select option {
-  color: white;
-  background-color: black;
+  background-color: white;
 }
 form textarea {
   -webkit-backdrop-filter: brightness(800%);

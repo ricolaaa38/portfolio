@@ -27,9 +27,14 @@ form {
   display: flex;
   flex-direction: column;
   width: 35%;
-  input,
+  input {
+    color: #03224c;
+  }
   select {
     color: #03224c;
+  }
+  input,
+  select {
     border: none;
     height: 20px;
     border-radius: 5px;
@@ -43,8 +48,7 @@ form {
       outline: 2px solid white;
     }
     option {
-      color: white;
-      background-color: black;
+      background-color: white;
     }
   }
   textarea {
