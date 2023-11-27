@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Logo from '../../assets/Border-Color.jsx';
+import LogoNc from '../../assets/ncWhite.png';
 import './style/index.css';
 
 function Header() {
@@ -32,7 +32,7 @@ function Header() {
   return (
     <header className={`portfolio-header ${isNavActive ? 'active' : ''}`}>
       <nav>
-        <Logo />
+        <img src={LogoNc} alt="logo site nc" />
         <ul className={`${isDropdownVisible ? 'visible' : 'non-visible'}`}>
           <li>
             <a href="#accueil" onClick={handleLinkClick} alt="lien accueil">

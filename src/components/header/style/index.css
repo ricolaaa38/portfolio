@@ -51,6 +51,11 @@ nav {
   padding: 10px;
   margin-right: 25px;
 }
+nav img {
+  margin-left: 15px;
+  width: 40px;
+  height: auto;
+}
 
 nav ul {
   display: flex;
