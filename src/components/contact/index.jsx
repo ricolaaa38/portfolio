@@ -75,13 +75,16 @@ function Contact() {
     }
 
     try {
-      const response = await fetch('http://localhost:4000/api/formulaire', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        'http://nicolas-cretton.com/api/formulaire',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         console.log('Données envoyées avec succès');
