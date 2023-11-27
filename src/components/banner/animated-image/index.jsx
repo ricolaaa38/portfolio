@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style/index.css';
-import ImagePng from '../../../assets/logo/react.png';
+import ImagePng from '../../../assets/ecran.png';
 
 function AnimatedBannerImage() {
   const [cloud1X, setCloud1X] = useState(0);
@@ -49,7 +49,7 @@ function AnimatedBannerImage() {
         className="imageBanner"
         style={{ transform: `translateY(${imageY}px)` }}
       >
-        <img src={ImagePng} alt="gaspard" />
+        <img src={ImagePng} alt="écran" />
       </div>
       <div
         className="cloud cloud1"

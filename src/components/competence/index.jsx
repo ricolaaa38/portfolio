@@ -20,21 +20,26 @@ function Competences() {
       <div className="compentences-content hidden">
         <h2>Mes compétences</h2>
         <div className="competences-outils">
-          <img src={ReactLogo} alt="react logo" />
-          <img src={Css3} alt="css3 logo" />
-          <img src={Html5} alt="Html5 logo" />
-          <img src={Javascript} alt="Javascript logo" />
-          <img src={Scss} alt="Scss sass logo" />
-          <img src={Node} alt="Node logo" />
-          <img className="github-logo" src={Github} alt="Github logo" />
+          <img src={ReactLogo} alt="react logo" title="React" />
+          <img src={Css3} alt="css3 logo" title="Css3" />
+          <img src={Html5} alt="Html5 logo" title="Html5" />
+          <img src={Javascript} alt="Javascript logo" title="Javascript" />
+          <img src={Scss} alt="Scss sass logo" title="Scss" />
+          <img src={Node} alt="Node logo" title="Node" />
+          <img
+            className="github-logo"
+            src={Github}
+            alt="Github logo"
+            title="Github"
+          />
         </div>
         <h2>Autres</h2>
         <div className="competences-outils">
-          <img src={Express} alt="expressjs logo" />
-          <img src={Mongo} alt="mongodb logo" />
-          <img src={Git} alt="git logo" />
-          <img src={Trello} alt="trello logo" />
-          <img src={Wakelet} alt="wakelet logo" />
+          <img src={Express} alt="expressjs logo" title="Express.js" />
+          <img src={Mongo} alt="mongodb logo" title="MongoDB" />
+          <img src={Git} alt="git logo" title="Git" />
+          <img src={Trello} alt="trello logo" title="Trello" />
+          <img src={Wakelet} alt="wakelet logo" title="Wakelet" />
         </div>
       </div>
     </section>
