@@ -74,7 +74,7 @@ function Contact() {
     }
 
     try {
-      const baseURL = 'http://178.16.129:4000';
+      const baseURL = 'http://178.16.129.120:4000';
       const response = await fetch(`${baseURL}/api/formulaire`, {
         method: 'POST',
         headers: {
