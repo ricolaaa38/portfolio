@@ -1,6 +1,7 @@
 import UseIntersectionObserver from '../function/IntersectionObserver';
 import './style/index.css';
 import Competences from '../competence';
+import Portrait from '../../assets/portrait.png';
 
 function About() {
   UseIntersectionObserver('.hidden');
@@ -9,7 +10,9 @@ function About() {
     <section className="portfolio-about">
       <div className="about" id="about">
         <div className="about-text-img">
-          <div className="about-img"></div>
+          <div className="about-img">
+            <img src={Portrait} alt="portraiot nicolas style draw" />
+          </div>
           <div className="presentation-about hidden">
             <h2>À Propos de moi</h2>
             <p>

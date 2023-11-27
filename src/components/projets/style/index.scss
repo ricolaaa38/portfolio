@@ -12,6 +12,7 @@
   width: 100%;
   padding: 0 10px;
   z-index: 10;
+  height: 100vh;
   background: linear-gradient(
     to bottom,
 
@@ -24,7 +25,7 @@
   justify-content: center;
   align-items: center;
   h2 {
-    margin-top: 75px;
+    margin-top: 100px;
     color: #081c37;
   }
 }
@@ -42,6 +43,12 @@
 @media (max-width: 1024px) {
   .carousel-wrapper {
     height: 500px;
+  }
+  .projets {
+    height: 70vh;
+    h2 {
+      margin-top: 50px;
+    }
   }
 }
 

@@ -49,6 +49,7 @@ p {
   .img-cover-modal {
     background-color: white;
     border-radius: 15px;
+    box-shadow: 0 0 3px #666;
     width: 50%;
     height: 100%;
     margin: 10px;
@@ -63,12 +64,15 @@ p {
   .description-et-techno {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin: 10px;
     align-items: center;
     width: 50%;
     height: 100%;
     overflow: auto;
-
+    box-shadow: 0 0 3px #666;
+    border-radius: 15px;
+    background: rgb(243, 245, 255);
     .text-description {
       text-align: center;
       margin-bottom: 0;
@@ -78,10 +82,11 @@ p {
       color: $backgroundUnderBottom;
       text-decoration: underline;
       font-size: 16px;
+      margin-top: 10px;
       margin-bottom: 10px;
     }
     .techno-title {
-      margin-top: 20px;
+      margin-top: 15px;
       font-weight: bold;
       font-size: 20px;
     }
@@ -112,6 +117,7 @@ p {
   align-items: center;
   .image-detail {
     border-radius: 15px;
+    box-shadow: 0 0 3px #666;
     background-color: white;
     margin: 10px;
     width: 50%;
@@ -119,7 +125,7 @@ p {
     overflow: auto;
     img {
       width: 100%;
-      min-height: 99%;
+      min-height: 100%;
       height: auto;
 
       border-radius: 15px;
@@ -138,7 +144,9 @@ p {
   .intro-modal {
     flex-direction: column-reverse;
     justify-content: flex-end;
+    align-items: flex-start;
     height: auto;
+    width: 98%;
     .text-description {
       margin: 0;
       font-size: 15px;
@@ -162,6 +170,9 @@ p {
   .images-details {
     flex-direction: column;
     height: auto;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 98%;
     .image-detail {
       width: 100%;
       min-height: 50%;
@@ -177,9 +188,13 @@ p {
 
 @media (max-width: 768px) {
   .intro-modal {
+    width: 95%;
     .description-et-techno {
       height: auto;
       max-height: 750px;
     }
+  }
+  .images-details {
+    width: 95%;
   }
 }

@@ -31,7 +31,7 @@ const MyComponent = ({ selectedSlide, closeModal }) => {
     };
   }, [closeModalHandler]);
 
-  const modalWidth = windowWidth > 1024 ? '60%' : '90%';
+  const modalWidth = windowWidth > 1024 ? '60%' : '95%';
   const modalHeight = windowWidth > 1024 ? '95%' : 'auto';
   const modalMargin = windowWidth > 1024 ? '10px' : '0';
   const topPosition = windowWidth > 1024 ? '2%' : '10%';
