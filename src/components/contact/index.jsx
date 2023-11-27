@@ -30,7 +30,6 @@ function Contact() {
     });
     setIsEmailValid(true);
     setIsSubmitSuccess(false);
-    console.log('Form after reset:', formData);
 
     document.getElementById('contactForm').reset();
   };
@@ -75,16 +74,14 @@ function Contact() {
     }
 
     try {
-      const response = await fetch(
-        'http://nicolas-cretton.com/api/formulaire',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const baseURL = 'http://178.16.129:4000';
+      const response = await fetch(`${baseURL}/api/formulaire`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
       if (response.ok) {
         console.log('Données envoyées avec succès');
