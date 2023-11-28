@@ -1,0 +1,92 @@
+[
+  {
+    "id": "booki",
+    "title": "Front-end du site Booki",
+    "cover": "images-projets/booki/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "images-projets/booki/long.png"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "images-projets/booki/general.png"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Au cours de ces études, j'ai du réaliser le Front-End de la page d'accueil pour le projet 'BOOKI'. Mon rôle était de créer une page d'acceuil avec HTML et CSS, optimisée pour une expérience utilisateur sur divers appareils. Cette simulation a renforcé ma compréhension du design web adaptatif, démontrant ma capacité à concevoir une présentation attrayante, fonctionnelle et responsive.",
+    "lien": "https://ricolaaa38.github.io/Projet_2_Booki_OC/",
+    "techno": ["HTML", "CSS"]
+  },
+  {
+    "id": "kasa",
+    "title": "Front-end du site Kasa",
+    "cover": "images-projets/kasa/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "images-projets/kasa/long.png"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "images-projets/kasa/general.png"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Ma contribution au projet 'KASA' a consisté à développer intégralement le site avec React. De la page d'accueil aux pages 'À Propos' et locations, j'ai mis en place la gestion des routes avec React Router, gestion des états, et ajouté des animations pour une expérience utilisateur dynamique et responsive. Les technologies clés, telles que React, SCSS, HTML, et JavaScript, ont été utilisées avec précision pour assurer un design moderne et une navigation fluide. Ce projet a été une occasion passionnante de developper ma maîtrise de React et de créer des interfaces web dynamiques et esthétiques.",
+    "lien": "https://github.com/ricolaaa38/kasa-fr.git",
+    "techno": ["HTML", "SCSS", "Javascript", "React"]
+  },
+  {
+    "id": "vieuxGrimoire",
+    "title": "Back-end du site Mon-vieux-Grimoire",
+    "cover": "images-projets/monVieuxGrimoire/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "images-projets/monVieuxGrimoire/long.png"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "images-projets/monVieuxGrimoire/general.png"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. En charge du développement backend, j'ai réalisé les opérations CRUD pour l'inscription, la notation, et l'affichage de nouveaux livres. J'ai mis en place un système d'authentification complet avec le hashage sécurisé des mots de passe, la génération de tokens, et l'utilisation de middlewares. La gestion des images a été optimisée avec Multer, respectant l'environnement (Green Code) par le contrôle de la taille et du format. La création et la gestion sécurisée de la base de données MongoDB (Mongoose) ont été intégrées, soulignant ma capacité à concevoir des fonctionnalités complexes avec un accent particulier sur la sécurité et l'efficacité.",
+    "lien": "https://github.com/ricolaaa38/mon-vieux-grimoire.git",
+    "techno": ["Node", "Express", "MongoDB"]
+  },
+  {
+    "id": "sophieBluel",
+    "title": "Front-end du site de Sophie Bluel",
+    "cover": "images-projets/sophieBluel/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "images-projets/sophieBluel/long.png"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "images-projets/sophieBluel/general.png"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. J'ai réalisé le  Front-End pour le site de Sophie Bluel, photographe, en mettant l'accent sur la page d'accueil et la page de connexion. Intégrant ces interfaces avec le backend existant via des appels à l'API, j'ai permis à la cliente d'ajouter et de supprimer des projets de manière sécurisée. Les modales interactives ont facilité la gestion du portfolio, tandis que des filtres ont été ajoutés pour catégoriser les photos. La gestion de la taille maximale des images a optimisé les performances sans compromettre la qualité. Des animations ont dynamisé l'expérience utilisateur. Réalisé avec JavaScript, HTML, et CSS, ce projet représente une fusion créative et fonctionnelle pour mettre en valeur le talent photographique de Sophie Bluel.",
+    "lien": "https://github.com/ricolaaa38/Projet_3_portfolio_sophie_bluel.git",
+    "techno": ["HTML", "CSS", "Javascript"]
+  },
+  {
+    "id": "ninaCarducci",
+    "title": "Optimisation et débugue du site de Nina Carducci",
+    "cover": "images-projets/ninaCarducci/cover.png",
+    "images": [
+      {
+        "idImage": "long",
+        "urlImage": "images-projets/ninaCarducci/long.png"
+      },
+      {
+        "idImage": "general",
+        "urlImage": "images-projets/ninaCarducci/general.png"
+      }
+    ],
+    "description": "Projet réalisé dans le cadre de ma formation OpenClassrooms de developpeur web. Après un audit Lighthouse, j'ai corrigé les bugs, optimisé les performances, géré les tailles d'images, et réorganisé le DOM pour le site de Nina Carducci. J'ai mis en place un solide référencement local pour renforcer la visibilité de son entreprise. L'utilisation de Lighthouse et de l'extension WAVE a assuré une accessibilité optimale, démontrant ma capacité à résoudre les problèmes techniques et à améliorer la visibilité en ligne d'une entreprise locale.",
+    "lien": "https://github.com/ricolaaa38/Projet_3_portfolio_sophie_bluel.git",
+    "techno": ["Lighthouse", "Wave"]
+  }
+]

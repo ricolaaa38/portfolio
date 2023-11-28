@@ -1,18 +1,28 @@
 @import '../../../style/index.scss';
 
 .portfolio-footer {
+  background: linear-gradient(to bottom, $backgroundBottom, $backgroundTop);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-bottom: 25px;
+  padding: 40px 0;
   .lien-reseaux {
     display: flex;
-    gap: 10px;
-    padding: 10px 0;
+    gap: 15px;
+    padding: 15px 0;
   }
   p {
-    margin: 0;
+    margin-top: 20px;
     color: $text-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-footer {
+    .lien-reseaux {
+      gap: 15px;
+      padding: 15px 0;
+    }
   }
 }

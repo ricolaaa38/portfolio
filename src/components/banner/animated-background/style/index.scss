@@ -1,5 +1,9 @@
-$starFieldWidth: 2600;
-$starFieldHeight: 2600;
+@import '../../style/index.scss';
+
+// inspiration sur https://dev.to/sobhandash/lets-build-a-night-sky-using-pure-scss-2g0n
+
+$starFieldWidth: 100;
+$starFieldHeight: 100;
 $starStartOffset: 600px;
 
 $starOneScrollDuration: 150s;
@@ -9,9 +13,9 @@ $starTwoBisScrollDuration: 350s;
 $starThreeScrollDuration: 200s;
 $starThreeBisScrollDuration: 400s;
 $numStarFixedStars: 100;
-$numStarOneStars: 200;
-$numStarTwoStars: 150;
-$numStarThreeStars: 100;
+$numStarOneStars: 300;
+$numStarTwoStars: 200;
+$numStarThreeStars: 150;
 $numComet: 10;
 
 .main-container {
@@ -20,63 +24,61 @@ $numComet: 10;
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
+  background: linear-gradient(
+    to bottom,
+    $backgroundTop 0%,
+    $backgroundBottom 100%
+  );
   overflow: hidden;
 }
 
 @function create-stars($n) {
-  $stars: '#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF';
+  $stars: '#{random($starFieldWidth) * 2}vw #{random($starFieldHeight) * 2}vh #FFF';
 
   @for $i from 2 through $n {
-    $stars: '#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF';
+    $stars: '#{$stars} , #{random($starFieldWidth) * 2}vw #{random($starFieldHeight) * 2}vh #FFF';
   }
   @return unquote($stars);
 }
 
 @keyframes animStar {
   from {
-    transform: translateY(#{($starFieldHeight) / 2}px)
-      translateX(#{($starFieldWidth) / 2}px);
+    transform: translateY(0px) translateX(0px);
   }
   to {
-    transform: translateY(-#{$starFieldHeight}px)
-      translateX(-#{$starFieldWidth}px);
+    transform: translateY(-#{$starFieldHeight}vh)
+      translateX(-#{$starFieldWidth}vw);
   }
 }
 
-@keyframes animStarBis {
-  from {
-    transform: translateY(#{($starFieldHeight) * 1.5}px)
-      translateX(#{($starFieldWidth) * 1.5}px);
-  }
-  to {
-    transform: translateY(-#{$starFieldHeight}px)
-      translateX(-#{$starFieldWidth}px);
+@keyframes twinkleStar {
+  25% {
+    opacity: 0.1;
   }
 }
 
-@keyframes animShootingStar {
-  0% {
-    transform: translateY(0) translateX(0) rotate(-45deg);
-    opacity: 1;
-    height: 5px;
-  }
-  100% {
-    transform: translateY(-#{($starFieldHeight) * 0.7}px)
-      translateX(-#{$starFieldWidth}px) rotate(-55deg);
-    opacity: 1;
-    height: 400px;
-  }
-}
+// @keyframes animShootingStar {
+//   0% {
+//     transform: translateY(0) translateX(0) rotate(-55deg);
+//     opacity: 1;
+//     height: 5px;
+//   }
+//   100% {
+//     transform: translateY(-#{$starFieldHeight}vh)
+//       translateX(-#{$starFieldWidth}vw) rotate(-55deg);
+//     opacity: 1;
+//     height: 400px;
+//   }
+// }
 
-@mixin star-template($numStars, $starSize, $scrollSpeed) {
-  z-index: 1;
+@mixin fixed-star-template($numStars, $starSize, $twinkleDuration) {
+  z-index: 2;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
   background: transparent;
   box-shadow: create-stars($numStars);
-  animation: animStar $scrollSpeed linear infinite;
+  animation: twinkleStar $twinkleDuration ease-in-out infinite;
   &:after {
     content: ' ';
     top: -$starStartOffset;
@@ -89,14 +91,15 @@ $numComet: 10;
   }
 }
 
-@mixin star-template-bis($numStars, $starSize, $scrollSpeed) {
-  z-index: 1;
+@mixin star-template($numStars, $starSize, $scrollSpeed, $twinkleDuration) {
+  z-index: 2;
   width: $starSize;
   height: $starSize;
   border-radius: 50%;
   background: transparent;
   box-shadow: create-stars($numStars);
-  animation: animStarBis $scrollSpeed linear infinite;
+  animation: animStar $scrollSpeed linear infinite,
+    twinkleStar $twinkleDuration ease-in-out infinite;
   &:after {
     content: ' ';
     top: -$starStartOffset;
@@ -109,102 +112,174 @@ $numComet: 10;
   }
 }
 
-@mixin shooting-star-template(
-  $numStars,
-  $starSize,
-  $speed,
-  $bottomPosition,
-  $rightPosition
-) {
-  z-index: 1;
-  width: ($starSize) + px;
-  height: ($starSize + 80) + px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  position: absolute;
-  bottom: $bottomPosition;
-  right: $rightPosition;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 1)
-  );
-  animation: animShootingStar $speed linear infinite;
-}
+// @mixin shooting-star-template(
+//   $numStars,
+//   $starSize,
+//   $speed,
+//   $bottomPosition,
+//   $rightPosition
+// ) {
+//   z-index: 2;
+//   width: ($starSize) + px;
+//   height: ($starSize + 80) + px;
+//   border-top-left-radius: 50%;
+//   border-top-right-radius: 50%;
+//   position: absolute;
+//   bottom: $bottomPosition;
+//   right: $rightPosition;
+//   background: linear-gradient(
+//     to top,
+//     rgba(255, 255, 255, 0),
+//     rgba(255, 255, 255, 1)
+//   );
+//   animation: animShootingStar $speed linear infinite;
+// }
 
+// Fixed Stars
 .fixedStars1 {
-  @include star-template($numStarFixedStars, 1px, 0);
+  @include fixed-star-template($numStarFixedStars, 1px, 4s);
+  animation-delay: 2s;
 }
 .fixedStars2 {
-  @include star-template($numStarFixedStars, 2px, 0);
+  @include fixed-star-template($numStarFixedStars, 2px, 4s);
+  animation-delay: 1s;
 }
 .fixedStars3 {
-  @include star-template($numStarFixedStars, 3px, 0);
+  @include fixed-star-template($numStarFixedStars, 3px, 4s);
 }
+
+// Moving Stars
 .stars1 {
-  @include star-template($numStarOneStars, 1px, $starOneScrollDuration);
+  @include star-template($numStarOneStars, 1px, $starOneScrollDuration, 4s);
+  animation-delay: 1s;
 }
-.stars1bis {
-  @include star-template-bis($numStarOneStars, 1px, $starOneBisScrollDuration);
-}
+
 .stars2 {
-  @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration);
+  @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration, 4s);
+  animation-delay: 2s;
 }
-.stars2bis {
-  @include star-template-bis($numStarTwoStars, 1px, $starTwoBisScrollDuration);
-}
+
 .stars3 {
-  @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration);
+  @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration, 4s);
 }
-.stars3bis {
-  @include star-template-bis(
-    $numStarThreeStars,
-    3px,
-    $starThreeBisScrollDuration
-  );
-}
-.comet1 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    random(10) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
-  );
-}
-.comet2 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    random(10) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
-  );
-}
-.comet3 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    random(10) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
-  );
-}
-.comet4 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    random(10) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
-  );
-}
-.comet5 {
-  @include shooting-star-template(
-    $numComet,
-    random(4) + 1,
-    random(10) + 10 + s,
-    random(2000) - 2000 + px,
-    random(500) - 500 + px
-  );
-}
+
+// Moving comets
+// .comet1 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 0;
+// }
+// .comet2 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 4s;
+// }
+// .comet3 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 6s;
+// }
+// .comet4 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 8s;
+// }
+// .comet5 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 1s;
+// }
+// .comet6 {
+//   @include shooting-star-template(
+//     $numComet,
+//     random(4) + 1,
+//     5s,
+//     random(50) - random(50) + vh,
+//     random(50) - 50 + vw
+//   );
+//   animation-delay: 0;
+// }
+
+// option if you need to add other Stars
+
+// @mixin star-template-bis($numStars, $starSize, $scrollSpeed, $twinkleDuration) {
+//   z-index: 2;
+//   width: $starSize;
+//   height: $starSize;
+//   border-radius: 50%;
+//   background: transparent;
+//   box-shadow: create-stars($numStars);
+//   animation: animStarBis $scrollSpeed linear infinite,
+//     twinkleStar $twinkleDuration ease-in-out infinite;
+//   &:after {
+//     content: ' ';
+//     top: -$starStartOffset;
+//     width: $starSize;
+//     height: $starSize;
+//     border-radius: 50%;
+//     position: absolute;
+//     background: transparent;
+//     box-shadow: create-stars($numStars);
+//   }
+// }
+// .stars1bis {
+//   @include star-template-bis(
+//     $numStarOneStars,
+//     1px,
+//     $starOneBisScrollDuration,
+//     4s
+//   );
+//   animation-delay: 1s;
+// }
+// .stars2bis {
+//   @include star-template-bis(
+//     $numStarTwoStars,
+//     1px,
+//     $starTwoBisScrollDuration,
+//     4s
+//   );
+//   animation-delay: 2s;
+// }
+// .stars3bis {
+//   @include star-template-bis(
+//     $numStarThreeStars,
+//     3px,
+//     $starThreeBisScrollDuration,
+//     4s
+//   );
+// }
+// @keyframes animStarBis {
+//   from {
+//     transform: translateY(#{$starFieldHeight}vh)
+//       translateX(#{$starFieldWidth}vw);
+//   }
+//   to {
+//     transform: translateY(-#{$starFieldHeight}vh)
+//       translateX(-#{$starFieldWidth}vw);
+//   }
+// }

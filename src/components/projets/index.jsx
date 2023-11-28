@@ -1,13 +1,18 @@
 import './style/index.css';
+import UseIntersectionObserver from '../function/IntersectionObserver';
+
+import Carousel from './carousel';
 
 function Projets() {
+  UseIntersectionObserver('.hidden');
   return (
     <section className="portfolio-projets" id="projets">
-      <h2>Mes Travaux</h2>
-      <div className="projets1"></div>
-      <div className="projets1"></div>
-      <div className="projets1"></div>
-      <div className="projets1"></div>
+      <div className="projets">
+        <h2 className="hidden">Mes Travaux</h2>
+        <div className="carousel-wrapper hidden">
+          <Carousel />
+        </div>
+      </div>
     </section>
   );
 }

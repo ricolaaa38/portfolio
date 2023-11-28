@@ -1,17 +1,170 @@
 @import '../../../style/index.scss';
 
 .portfolio-contact {
-  margin: 50px;
-  border-radius: 25px;
-  background-color: $section-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.contact-content {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
   color: $text-color;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+}
+
+h2 {
+  margin-top: 25px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  width: 35%;
+  input {
+    color: #03224c;
+  }
+  select {
+    color: #03224c;
+  }
+  input,
+  select {
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+    margin: 10px 5px;
+    backdrop-filter: brightness(800%);
+    background: transparent;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      outline: 2px solid white;
+    }
+    option {
+      background-color: white;
+    }
+  }
+  textarea {
+    backdrop-filter: brightness(800%);
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      outline: 2px solid white;
+    }
+  }
+}
+input[type='submit'] {
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.intro-contact {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  p {
+    line-height: 2em;
+  }
+}
+
+::placeholder {
+  font-size: 15px;
+  color: white;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.error-submit-message {
+  position: absolute;
+  color: red;
+}
+
+.confirmation-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  p {
+    color: #03224c;
+  }
+}
+
+@media (max-width: 1024px) {
+  form {
+    margin-right: 10px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-contact {
+    height: 90vh;
+  }
+  .contact-content {
+    flex-direction: column;
+  }
+  .intro-contact {
+    width: 100%;
+    margin-bottom: 50px;
+    p {
+      line-height: 2em;
+      strong {
+        font-weight: bolder;
+      }
+    }
+  }
+  form {
+    margin-right: 0;
+    width: 90%;
+  }
+  .label-container {
+    gap: 5px;
+  }
 }

@@ -1,0 +1,175 @@
+.animated-pictures {
+  z-index: 50;
+  position: absolute;
+  background: transparent;
+  width: 600px;
+  height: 450px;
+}
+.imageBanner {
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  img {
+    height: 75%;
+    animation: imageAnimation 0.7s ease-in;
+  }
+}
+.cloud1 {
+  z-index: 52;
+  position: absolute;
+  background: transparent;
+  width: 50%;
+  height: 50%;
+  animation: cloud1Animation 0.5s ease-out;
+  bottom: 0;
+  right: 3%;
+  .cloud-main {
+    z-index: 53;
+    width: 100%;
+    height: 40%;
+    border-radius: 100em;
+    box-shadow: -3px 3px 3px rgba(116, 96, 143, 0.5);
+    position: absolute;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(193, 174, 218, 1) 10%,
+      rgba(182, 238, 255, 1) 100%
+    );
+    bottom: 0;
+  }
+  .cloud-center {
+    z-index: 52;
+    width: 40%;
+    height: 60%;
+    box-shadow: 1px 0 5px rgba(116, 96, 143, 0.5);
+    background: linear-gradient(
+      to bottom,
+      rgba(193, 174, 218, 1) 50%,
+      rgba(182, 238, 255, 1) 100%
+    );
+    position: absolute;
+    border-radius: 100em;
+    bottom: 0;
+    left: 15%;
+  }
+  .cloud-right {
+    width: 50%;
+    height: 70%;
+    background: linear-gradient(
+      to bottom,
+      rgba(193, 174, 218, 1) 50%,
+      rgba(182, 238, 255, 1) 100%
+    );
+    position: absolute;
+    border-radius: 100em;
+    right: 15%;
+    bottom: 0;
+  }
+}
+
+.cloud2 {
+  z-index: 51;
+  position: absolute;
+  background: transparent;
+  width: 50%;
+  height: 50%;
+  animation: cloud2Animation 0.5s ease-out;
+  bottom: 0;
+  left: 5%;
+  .cloud-main {
+    z-index: 53;
+    width: 100%;
+    height: 40%;
+    border-radius: 100em;
+    position: absolute;
+    background: linear-gradient(
+      to bottom,
+      rgba(202, 188, 221, 1) 10%,
+      rgba(198, 242, 255, 1) 100%
+    );
+    bottom: 0;
+  }
+  .cloud-center {
+    width: 40%;
+    height: 60%;
+    background: linear-gradient(
+      to bottom,
+      rgba(202, 188, 221, 1) 50%,
+      rgba(198, 242, 255, 1) 100%
+    );
+    position: absolute;
+    border-radius: 100em;
+    bottom: 0;
+    right: 15%;
+  }
+  .cloud-right {
+    width: 50%;
+    height: 70%;
+    box-shadow: 1px 0 10px #8a6f9e;
+    background: linear-gradient(
+      to bottom,
+      rgba(202, 188, 221, 1) 50%,
+      rgba(198, 242, 255, 1) 100%
+    );
+    position: absolute;
+    border-radius: 100em;
+    left: 15%;
+    bottom: 0;
+  }
+}
+@keyframes cloud1Animation {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) translateX(60px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes cloud2Animation {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageAnimation {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .animated-pictures {
+    width: 450px;
+    height: 337px;
+    top: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-pictures {
+    width: 350px;
+    height: 262px;
+  }
+}

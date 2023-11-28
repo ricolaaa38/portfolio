@@ -1,0 +1,80 @@
+@import '../../../../style/index.scss';
+
+.animated-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    -45deg,
+    rgba(202, 188, 221, 1) 50%,
+    rgba(198, 242, 255, 1) 100%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-items: flex-start;
+
+  margin-top: 0;
+  margin-left: 20%;
+  .hi {
+    font-family: 'Roboto';
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+}
+
+.titleBanner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
+  font-weight: bolder;
+  margin: 0;
+  height: 1em;
+}
+
+.spanMessage {
+  margin-block: -0.5em;
+  display: inline-block;
+}
+
+.bonjour-intro {
+  font-size: 1.5em;
+}
+
+@media (max-width: 1024px) {
+  .animated-text {
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30%;
+    margin-left: 0;
+    .hi {
+      font-size: 1.5em;
+    }
+  }
+  .titleBanner {
+    font-size: 4em;
+  }
+  .bonjour-intro {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-text {
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 0;
+    .hi {
+      font-size: 1em;
+    }
+  }
+  .titleBanner {
+    font-size: 2.5em;
+  }
+  .bonjour-intro {
+    font-size: 1em;
+  }
+}

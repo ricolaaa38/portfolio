@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #201c2f;
+  font-family: "Roboto";
+}
+
+h2 {
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+.modal-content {
+  width: 100%;
+  height: 99%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: auto;
+  color: #101159;
+}
+
+p {
+  margin: 10px;
+}
+
+.titre-croix {
+  z-index: 10;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.titre-croix h3 {
+  font-size: 25px;
+  margin: 20px 10px;
+}
+.titre-croix button {
+  font-size: 25px;
+  background: transparent;
+  border: none;
+}
+.titre-croix button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.intro-modal {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 45%;
+}
+.intro-modal .img-cover-modal {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 3px #666;
+  width: 50%;
+  height: 100%;
+  margin: 10px;
+}
+.intro-modal .img-cover-modal img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.intro-modal .description-et-techno {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 0 0 3px #666;
+  border-radius: 15px;
+  background: rgb(243, 245, 255);
+}
+.intro-modal .description-et-techno .text-description {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+.intro-modal .description-et-techno a {
+  color: #101159;
+  text-decoration: underline;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.intro-modal .description-et-techno .techno-title {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.intro-modal .description-et-techno .technos {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 5px;
+  align-items: center;
+}
+.intro-modal .description-et-techno .technos .techno-modal {
+  box-shadow: 0 0 3px #666;
+  padding: 4px 6px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.images-details {
+  margin-top: 25px;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.images-details .image-detail {
+  border-radius: 15px;
+  box-shadow: 0 0 3px #666;
+  background-color: white;
+  margin: 10px;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+}
+.images-details .image-detail img {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+@media (max-width: 1024px) {
+  .titre-croix {
+    height: 10%;
+  }
+  .titre-croix h3 {
+    font-size: 20px;
+    margin: 10px 5px;
+  }
+  .intro-modal {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: auto;
+    width: 98%;
+  }
+  .intro-modal .text-description {
+    margin: 0;
+    font-size: 15px;
+  }
+  .intro-modal .img-cover-modal {
+    width: 100%;
+    height: 60%;
+  }
+  .intro-modal .img-cover-modal img {
+    max-height: 450px;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .intro-modal .description-et-techno {
+    width: 100%;
+    height: 350px;
+    overflow: visible;
+  }
+  .images-details {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 98%;
+  }
+  .images-details .image-detail {
+    width: 100%;
+    min-height: 50%;
+    max-height: 70%;
+    overflow: hidden;
+  }
+  .images-details .image-detail img {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (max-width: 768px) {
+  .intro-modal {
+    width: 95%;
+  }
+  .intro-modal .description-et-techno {
+    height: auto;
+    max-height: 750px;
+  }
+  .images-details {
+    width: 95%;
+  }
+}/*# sourceMappingURL=index.css.map */
