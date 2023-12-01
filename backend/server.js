@@ -40,7 +40,7 @@ const errorHandler = error => {
 const server = http.createServer(app);
 
 
-server.listen(port, '178.16.129.239');
+
 server.on('error', errorHandler);
 server.on('listening', () => {
     const address = server.address();
@@ -50,4 +50,4 @@ server.on('listening', () => {
     
 });
 
-
+server.listen(port);
