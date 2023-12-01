@@ -4,7 +4,7 @@ import './style/index.css';
 import Header from './components/header';
 import Banner from './components/banner';
 import About from './components/about';
-
+import OnlineSchemaOrg from './components/schema';
 import Projets from './components/projets';
 import Contact from './components/contact';
 import Footer from './components/footer';
@@ -16,6 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 ReactModal.setAppElement('#root');
 root.render(
   <React.StrictMode>
+    <OnlineSchemaOrg />
     <div className="body-body">
       <Header />
       <Banner />
