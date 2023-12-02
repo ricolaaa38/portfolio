@@ -11,7 +11,7 @@ function About() {
       <div className="about" id="about">
         <div className="about-text-img">
           <div className="about-img">
-            <img src={Portrait} alt="portraiot nicolas style draw" />
+            <img src={Portrait} alt="portrait nicolas style draw" />
           </div>
           <div className="presentation-about hidden">
             <h2>À Propos de moi</h2>
@@ -24,9 +24,16 @@ function About() {
               polyvalence et une approche pragmatique que j'applique avec
               enthousiasme dans le domaine du développement. Ce portfolio est le
               reflet de mon engagement à acquérir de nouvelles compétences et à
-              relever des défis stimulants. Explorez mes projets et découvrez
-              comment ma passion pour le code se traduit en solutions web
-              dynamiques et fonctionnelles.
+              relever des défis stimulants.
+              <br /> <br />
+              Les compétences et l'expérience que j'ai acquis au cours des 6
+              mois de ma formation chez <strong>OpenClassroom</strong> ainsi que
+              les technologies que j'ai appris à maîtriser pendant cette
+              formation vous sont présentées ci-dessous dans le caroussel de mes
+              travaux. <br />
+              <br />
+              Explorez ces projets et découvrez comment ma passion pour le code
+              se traduit en solutions web dynamiques et fonctionnelles.
             </p>
           </div>
         </div>
